@@ -78,7 +78,7 @@ footer{
 }
 
 .carrito{
-  background-image: url("../src/assets/carrito.png");
+  background-image: url("../../assets/carrito.png");
   background-position: center;
   background-size: 30px;
   background-repeat: no-repeat;
