@@ -77,7 +77,7 @@ footer{
 }
 
 .carrito{
-  background-image: url("imagenes/carrito.png");
+  background-image: url("../../assets/carrito.png");
   background-position: center;
   background-size: 30px;
   background-repeat: no-repeat;
@@ -106,7 +106,7 @@ footer{
 }
 
 .redondo{
-  background-image: url("imagenes/login.png");
+  background-image: url("../../assets/login.png");
   background-position: center;
   background-position-y: 4px;
   background-size: cover;
@@ -185,7 +185,7 @@ footer{
   width: 40px;
   height: 36px;
   border: 3px solid #3e77ff;
-  background-image: url("imagenes/lupa.png");
+  background-image: url("../../assets/lupa.png");
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: center;
@@ -338,7 +338,7 @@ article{
 .img1{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot1.png");
+  background-image: url("../../assets/fot1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -373,7 +373,7 @@ article{
 .img2{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot2.png");
+  background-image: url("../../assets/fot2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -407,7 +407,7 @@ article{
 .img3{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot3.png");
+  background-image: url("../../assets/fot3.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -453,7 +453,7 @@ article{
 .img4{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot4.png");
+  background-image: url("../../assets/fot4.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -489,7 +489,7 @@ article{
 .img5{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot5.png");
+  background-image: url("../../assets/fot5.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -524,7 +524,7 @@ article{
 .img6{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot6.png");
+  background-image: url("../../assets/fot6.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -570,7 +570,7 @@ article{
 .img7{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot7.png");
+  background-image: url("../../assets/fot7.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -606,7 +606,7 @@ article{
 .img8{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot8.png");
+  background-image: url("../../assets/fot8.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -641,7 +641,7 @@ article{
 .img9{
   flex-grow: 2;
   margin: 50px 20px 50px;
-  background-image: url("imagenes/fot9.png");
+  background-image: url("../../assets/fot9.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

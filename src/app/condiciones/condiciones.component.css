@@ -82,7 +82,7 @@ footer{
 }
 
 .carrito{
-  background-image: url("imagenes/carrito.png");
+  background-image: url("../../assets/carrito.png");
   background-position: center;
   background-size: 30px;
   background-repeat: no-repeat;
@@ -111,7 +111,7 @@ footer{
 }
 
 .redondo{
-  background-image: url("imagenes/login.png");
+  background-image: url("../../assets/login.png");
   background-position: center;
   background-position-y: 4px;
   background-size: cover;
@@ -190,7 +190,7 @@ footer{
   width: 40px;
   height: 36px;
   border: 3px solid #3e77ff;
-  background-image: url("imagenes/lupa.png");
+  background-image: url("../../assets/lupa.png");
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: center;
