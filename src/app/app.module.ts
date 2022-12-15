@@ -12,6 +12,7 @@ import {MovilesComponent} from "./moviles/moviles.component";
 import {OrdenadoresComponent} from "./ordenadores/ordenadores.component";
 import {PerifericosComponent} from "./perifericos/perifericos.component";
 import {FormsModule} from "@angular/forms";
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,12 @@ import {FormsModule} from "@angular/forms";
     Formulario2Component,
     MovilesComponent,
     OrdenadoresComponent,
-    PerifericosComponent
+    PerifericosComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing,
   ],
   providers: [],
   bootstrap: [AppComponent]

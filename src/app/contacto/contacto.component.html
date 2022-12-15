@@ -6,12 +6,12 @@
   <meta name="description" content="">
   <link rel="stylesheet" href="contacto.component.css">
   <title>Amazon</title>
-  <link rel="shortcut icon" href="imagenes/minilogo.jpg">
+  <link rel="shortcut icon" href="../../assets/minilogo.jpg">
 </head>
 <body>
 <header>
   <div class="derecha">
-    <a href="PaginaPrincipal.html"><img src="imagenes/logo.png" class="logo" alt="minilogo"></a>
+    <a routerLink="/pagina-web"><img src="../../assets/logo.png" class="logo" alt="minilogo"></a>
   </div>
   <div class="izquierda">
     <div class="wrap">
@@ -22,10 +22,10 @@
     </div>
   </div>
   <div class="carro">
-    <a href="Carrito.html"> <button class="carrito"></button> </a>
+    <a href="../carrito/carrito.component.html"> <button class="carrito"></button> </a>
   </div>
   <div class="login">
-    <a href="formulario2.html"><button class="redondo"></button></a>
+    <a href="../formulario/formulario.component.html"><button class="redondo"></button></a>
   </div>
 </header>
 <nav>
@@ -172,8 +172,8 @@
     <div class="fot1">
       <ul>
         <li><b>¿Necesitas ayuda?</b></li>
-        <li class="habilitado"><a href="Condiciones.html">Condiciones</a></li>
-        <li class="habilitado"><a href="Contacto.html">Contacto</a></li>
+        <li class="habilitado"><a routerLink="/condiciones">Condiciones</a></li>
+        <li class="habilitado"><a routerLink="/contacto">Contacto</a></li>
         <li class="deshabilitado"><a href="">Amazon y COVID-19</a></li>
         <li class="deshabilitado"><a href="">Localizar o gestionar</a></li>
         <li class="deshabilitado"><a href="">Tarifas y políticas de envío</a></li>
@@ -186,7 +186,7 @@
     </div>
   </div>
   <div class="dos">
-    <a href="PaginaPrincipal.html"><img src="imagenes/logo.png" alt="logo"></a>
+    <a routerLink="/pagina-web"><img src="../../assets/logo.png" alt="logo"></a>
 
   </div>
 </footer>
