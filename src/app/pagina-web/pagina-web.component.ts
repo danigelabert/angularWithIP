@@ -23,15 +23,6 @@ export class PaginaWebComponent implements OnInit{
       boton.style.visibility="hidden"
       let lin=document.getElementById("link")!;
       lin.style.marginTop="18%"
-      // boton.style.backgroundImage="none"
-      // boton.style.borderTopRightRadius="0px"
-      // boton.style.borderBottomRightRadius="0px"
-      // boton.style.borderBottomLeftRadius="15px"
-      // boton.style.borderTopLeftRadius="15px"
-      // boton.style.width="85px"
-      // boton.style.marginTop="20%"
-      // boton.style.marginLeft="5%"
-      // boton.style.backgroundColor="#b6b6b6"
       this.resultat=nombre
       let mostrar=document.getElementById("logout")!;
       mostrar.style.visibility="visible"
