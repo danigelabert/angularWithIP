@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { PaginaWebComponent } from './pagina-web/pagina-web.component';
+import {PaginaWebComponent} from './pagina-web/pagina-web.component';
 import {CarritoComponent} from "./carrito/carrito.component";
 import {CondicionesComponent} from "./condiciones/condiciones.component";
 import {ContactoComponent} from "./contacto/contacto.component";

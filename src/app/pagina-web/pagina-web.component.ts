@@ -20,22 +20,25 @@ export class PaginaWebComponent implements OnInit{
       console.log("no esta")
     } else {
       let boton=document.getElementById("redondo")!;
-      boton.style.backgroundImage="none"
-      boton.style.borderTopRightRadius="0px"
-      boton.style.borderBottomRightRadius="0px"
-      boton.style.borderBottomLeftRadius="15px"
-      boton.style.borderTopLeftRadius="15px"
-      boton.style.width="85px"
-      boton.style.marginTop="20%"
-      boton.style.marginLeft="5%"
-      boton.style.backgroundColor="#9a9a9a"
+      boton.style.visibility="hidden"
+      let lin=document.getElementById("link")!;
+      lin.style.marginTop="18%"
+      // boton.style.backgroundImage="none"
+      // boton.style.borderTopRightRadius="0px"
+      // boton.style.borderBottomRightRadius="0px"
+      // boton.style.borderBottomLeftRadius="15px"
+      // boton.style.borderTopLeftRadius="15px"
+      // boton.style.width="85px"
+      // boton.style.marginTop="20%"
+      // boton.style.marginLeft="5%"
+      // boton.style.backgroundColor="#b6b6b6"
       this.resultat=nombre
       let mostrar=document.getElementById("logout")!;
       mostrar.style.visibility="visible"
+      mostrar.style.cursor="pointer"
     }
   }
   borrar(){
-    console.log("hola")
     window.localStorage.clear()
     const nombre=this.s.getUser()
     this.resultat=nombre
@@ -48,5 +51,8 @@ export class PaginaWebComponent implements OnInit{
     boton.style.marginLeft="50%"
     boton.style.marginTop="35%"
     boton.style.backgroundColor="white"
+    boton.style.visibility="visible"
+    let lin=document.getElementById("link")!;
+    lin.style.marginTop="0"
   }
 }

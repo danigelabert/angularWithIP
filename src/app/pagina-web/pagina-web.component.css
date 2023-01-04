@@ -107,6 +107,13 @@ footer{
   text-align: center;
 }
 
+#link{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 #redondo{
   background-image: url("../../assets/login.png");
   background-position: center;
@@ -121,12 +128,17 @@ footer{
 
 #logout{
   width: 50px;
-  height: 50.5px;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+  height: 50px;
+  border-radius: 15px;
   margin-top: 11.5%;
   margin-left: 3px;
   visibility: hidden;
+}
+
+#logout:hover{
+  background-color: #9b9b9b;
+  transition: 1s;
+  cursor: pointer;
 }
 
 #redondo:hover{
