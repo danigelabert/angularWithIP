@@ -21,11 +21,10 @@
         <form class="form">
           <h2>Registrate</h2>
           <p class="cuenta">Ya tienes cuenta?</p>
-          <p type="Nombre:"><input placeholder="Nombre"></p>
-          <p type="Apellidos:"><input placeholder="Apellidos"></p>
+          <p type="Usuario:"><input placeholder="Usuario" [(ngModel)]="usuari" [ngModelOptions]="{standalone:true}"></p>
           <p type="Email:"><input placeholder="Email"></p>
-          <p type="Contraseña:"><input type="password" placeholder="Contraseña"></p>
-          <button>Registrarse</button>
+          <p type="Contraseña:"><input type="password" placeholder="Contraseña" [(ngModel)]="password" [ngModelOptions]="{standalone:true}"></p>
+          <button (click)="valorLogIn()">Registrarse</button>
           <div class="compañia">
             <span class="fa fa-phone"></span>633 47 13 95
             <span class="fa fa-envelope-o"></span> amazon@gmail.com

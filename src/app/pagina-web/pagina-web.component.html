@@ -25,7 +25,8 @@
     <a routerLink="/carrito"> <button class="carrito"></button> </a>
   </div>
   <div class="login">
-    <a routerLink="/formulario"><button class="redondo"></button></a>
+    <a routerLink="/formulario"><button id="redondo">{{resultat}}</button></a>
+    <button type="button" id="logout" (click)="borrar()">Log Out</button>
   </div>
 </header>
 <nav>

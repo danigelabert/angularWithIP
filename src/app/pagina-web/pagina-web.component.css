@@ -34,6 +34,7 @@ article{
   display: flex;
   flex-flow: column;
   background: linear-gradient(#6aaae8,#ffffff);
+  font-size: 50px;
 }
 
 footer{
@@ -67,7 +68,7 @@ footer{
 .izquierda{
   margin-left: 20px;
   flex-grow: 1;
-  width: 50%;
+  width: 40%;
   display: flex;
 }
 
@@ -106,7 +107,7 @@ footer{
   text-align: center;
 }
 
-.redondo{
+#redondo{
   background-image: url("../../assets/login.png");
   background-position: center;
   background-position-y: 4px;
@@ -118,14 +119,24 @@ footer{
   margin-left: 50%;
 }
 
-.redondo:hover{
+#logout{
+  width: 50px;
+  height: 50.5px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 11.5%;
+  margin-left: 3px;
+  visibility: hidden;
+}
+
+#redondo:hover{
   background-color: #9b9b9b;
   transition: 1s;
   cursor: pointer;
 }
 
 .login a{
-  cursor: none;
+  cursor: default;
 }
 
 .izquierda img{
