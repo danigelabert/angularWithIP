@@ -19,8 +19,8 @@
 <div class="texto">
   <aside>
     <h3>Envio</h3>
-    <label><input type="checkbox" value="envio_gratis"> Envio gratis</label><br>
-    <label><input type="checkbox" value="envio_1dia"> Recíbelo mañana</label><br>
+    <label><input (click)="envioGratis()" type="checkbox" value="envio_gratis"> Envio gratis</label><br>
+    <label><input (click)="recibeloManana()" type="checkbox" value="envio_1dia"> Recíbelo mañana</label><br>
     <h3>Marca</h3>
     <label><input type="checkbox" value="apple"> Apple</label><br>
     <label><input type="checkbox" value="xiaomi"> Xiaomi</label><br>
@@ -40,66 +40,66 @@
       <h2>RESULTADOS</h2>
     </div>
     <div>
-      <div class="producto1">
+      <div class="producto1" *ngIf="productes[0].activat">
         <div class="imgproducto">
           <img src="../../assets/iPhone%2014%20Pro%20Max.png">
         </div>
         <div class="titolproducto">
-          <h2>iPhone 14 Pro Max</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>1499€ </h3>
-        <button class="ca" id="p1" ></button>
+          <h2>{{productes[0].titol}}</h2><br>
+          <p> {{productes[0].envio}}</p>
+          <h3>{{productes[0].preu}}</h3>
+          <button class="ca" id="p1" ></button>
         </div>
       </div>
-      <div class="producto2">
+      <div class="producto2" *ngIf="productes[1].activat">
         <div class="imgproducto">
           <img src="../../assets/iPhone%2013.png">
         </div>
         <div class="titolproducto">
-          <h2>iPhone 13</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>999€ </h3>
+          <h2>{{productes[1].titol}}</h2><br>
+          <p> {{productes[1].envio}}</p>
+          <h3>{{productes[1].preu}}</h3>
           <button class="ca" id="p2" onClick="afegir(this.id)"></button>
         </div>
       </div>
-      <div class="producto3">
+      <div class="producto3" *ngIf="productes[2].activat">
         <div class="imgproducto">
           <img src="../../assets/realme.png">
         </div>
         <div class="titolproducto">
-          <h2>Realme GT Master Edition</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>330€ </h3>
+          <h2>{{productes[2].titol}}</h2><br>
+          <p> {{productes[2].envio}}</p>
+          <h3>{{productes[2].preu}}</h3>
         </div>
       </div>
-      <div class="producto4">
+      <div class="producto4" *ngIf="productes[3].activat">
         <div class="imgproducto">
           <img src="../../assets/oppo.png">
         </div>
         <div class="titolproducto">
-          <h2>Oppo Find X3 Pro</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>899€ </h3>
+          <h2>{{productes[3].titol}}</h2><br>
+          <p> {{productes[3].envio}}</p>
+          <h3>{{productes[3].preu}}</h3>
         </div>
       </div>
-      <div class="producto5">
+      <div class="producto5" *ngIf="productes[4].activat">
         <div class="imgproducto">
           <img src="../../assets/Xiaomi.png">
         </div>
         <div class="titolproducto">
-          <h2>Xiaomi 12T Pro</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>1450€ </h3>
+          <h2>{{productes[4].titol}}</h2><br>
+          <p> {{productes[4].envio}}</p>
+          <h3>{{productes[4].preu}}</h3>
         </div>
       </div>
-      <div class="producto6">
+      <div class="producto6" *ngIf="productes[5].activat">
         <div class="imgproducto">
           <img src="../../assets/s22%20ultra.png">
         </div>
-        <div class="titolproducto">
-          <h2>Samsung S22 Ultra</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>1459€ </h3>
+        <div class="titolproducto" >
+          <h2>{{productes[5].titol}}</h2><br>
+          <p> {{productes[5].envio}}</p>
+          <h3>{{productes[5].preu}}</h3>
         </div>
       </div>
 
