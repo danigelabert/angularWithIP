@@ -28,7 +28,4 @@ export class FormularioComponent implements OnInit{
     }
     console.log(this.usuari+" "+this.password)
   }
-
-
 }
-

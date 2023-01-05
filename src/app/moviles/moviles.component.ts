@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./moviles.component.css']
 })
 export class MovilesComponent {
+  constructor() {
 
+  }
+
+  afegir(clicked_id: any){
+    alert(clicked_id);
+  }
 }
