@@ -8,6 +8,7 @@ import {Formulario2Component} from "./formulario2/formulario2.component";
 import {MovilesComponent} from "./moviles/moviles.component";
 import {OrdenadoresComponent} from "./ordenadores/ordenadores.component";
 import {PerifericosComponent} from "./perifericos/perifericos.component";
+import {MenuComponent} from "./menu/menu.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/pagina-web', pathMatch: 'full'},
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   {path:'formulario2', component: Formulario2Component },
   {path:'moviles', component:  MovilesComponent},
   {path:'ordenadores', component:  OrdenadoresComponent},
-  {path:'perifericos', component:  PerifericosComponent}
+  {path:'perifericos', component:  PerifericosComponent},
+  {path:'menu', component:  MenuComponent}
 ]
 
 export const routing= RouterModule.forRoot(appRoutes)
