@@ -9,13 +9,7 @@ body{
   margin: 0;
 }
 
-header{
-  background-color: #6aaae8;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  margin-bottom: 0;
-}
+
 
 /*nav{*/
 /*  width: 100%;*/
@@ -57,105 +51,6 @@ footer{
   width: 220px;
 }
 
-.derecha{
-  flex-grow: 3;
-  width: 30%;
-  align-items: center;
-  margin: 20px;
-}
-
-
-.izquierda{
-  margin-left: 20px;
-  flex-grow: 1;
-  width: 40%;
-  display: flex;
-}
-
-.carro {
-  flex-grow: 1;
-  display: flex;
-  width: 8%;
-}
-
-.carrito{
-  background-image: url("../../assets/carrito.png");
-  background-position: center;
-  background-size: 30px;
-  background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  margin-top: 60%;
-  margin-left: 150%;
-}
-
-.carro a{
-  cursor: none;
-}
-
-.carrito:hover{
-  background-color: #9b9b9b;
-  transition: 1s;
-  cursor: pointer;
-}
-
-.login{
-  flex-grow: 1;
-  display: flex;
-  width: 8%;
-  text-align: center;
-}
-
-#link{
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#redondo{
-  background-image: url("../../assets/login.png");
-  background-position: center;
-  background-position-y: 4px;
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  margin-top: 35%;
-  margin-left: 50%;
-}
-
-#logout{
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
-  margin-top: 11.5%;
-  margin-left: 3px;
-  visibility: hidden;
-}
-
-#logout:hover{
-  background-color: #9b9b9b;
-  transition: 1s;
-  cursor: pointer;
-}
-
-#redondo:hover{
-  background-color: #9b9b9b;
-  transition: 1s;
-  cursor: pointer;
-}
-
-.login a{
-  cursor: default;
-}
-
-.izquierda img{
-  width: 15%;
-  margin: 25px;
-}
-
 .log{
   flex-grow: 1;
   padding-top: 20px;
@@ -185,46 +80,8 @@ footer{
 }
 
 
-.search {
-  width: 100%;
-  display: flex;
-}
 
-.searchTerm {
-  width: 100%;
-  border: 3px solid #3e77ff;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
-}
 
-.searchTerm:focus{
-  color: #000000;
-}
-
-.searchButton {
-  width: 40px;
-  height: 36px;
-  border: 3px solid #3e77ff;
-  background-image: url("../../assets/lupa.png");
-  background-size: 25px;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-}
-
-.wrap{
-  width: 40%;
-  position: absolute;
-  margin-top: 50px;
-  margin-left: 250px;
-  transform: translate(-50%, -50%);
-}
 
 .lupa{
   width: 100px;

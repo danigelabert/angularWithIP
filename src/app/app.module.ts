@@ -14,6 +14,7 @@ import {PerifericosComponent} from "./perifericos/perifericos.component";
 import {FormsModule} from "@angular/forms";
 import { routing } from './app.routing';
 import {MenuComponent} from "./menu/menu.component";
+import { BuscadorComponent } from './buscador/buscador.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {MenuComponent} from "./menu/menu.component";
     OrdenadoresComponent,
     PerifericosComponent,
     MenuComponent,
+    BuscadorComponent,
   ],
   imports: [
     BrowserModule,

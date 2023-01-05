@@ -1,0 +1,20 @@
+<header>
+  <div class="derecha">
+    <a routerLink="/"><img src="../../assets/logo.png" class="logo" alt="minilogo"></a>
+  </div>
+  <div class="izquierda">
+    <div class="wrap">
+      <div class="search">
+        <input type="text" class="searchTerm" placeholder="Que estas buscando?" aria-label="#">
+        <button type="submit" class="searchButton"></button>
+      </div>
+    </div>
+  </div>
+  <div class="carro">
+    <a routerLink="/carrito"> <button class="carrito"></button> </a>
+  </div>
+  <div class="login">
+    <a routerLink="/formulario" id="link">{{resultat}}<button id="redondo">{{resultat}}</button></a>
+    <button type="button" id="logout" (click)="borrar()">Log Out</button>
+  </div>
+</header>
