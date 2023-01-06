@@ -15,6 +15,7 @@ import {FormsModule} from "@angular/forms";
 import { routing } from './app.routing';
 import {MenuComponent} from "./menu/menu.component";
 import { BuscadorComponent } from './buscador/buscador.component';
+import { PeupaginaComponent } from './peupagina/peupagina.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { BuscadorComponent } from './buscador/buscador.component';
     PerifericosComponent,
     MenuComponent,
     BuscadorComponent,
+    PeupaginaComponent,
   ],
   imports: [
     BrowserModule,
