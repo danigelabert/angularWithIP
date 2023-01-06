@@ -61,15 +61,66 @@ export class MovilesComponent implements OnInit{
   }
 
   envioGratis() : void {
-      this.productes[1].activat = !this.productes[1].activat;
-      this.productes[4].activat = !this.productes[4].activat;
+    this.productes[0].activat = true;
+    this.productes[1].activat = false;
+    this.productes[2].activat = true;
+    this.productes[3].activat = true;
+    this.productes[4].activat = false;
+    this.productes[5].activat = true;
   }
 
   recibeloManana() : void {
-    this.productes[0].activat = !this.productes[0].activat;
-    this.productes[2].activat = !this.productes[2].activat;
-    this.productes[3].activat = !this.productes[3].activat;
-    this.productes[5].activat = !this.productes[5].activat;
+    this.productes[0].activat = false;
+    this.productes[1].activat = true;
+    this.productes[2].activat = false;
+    this.productes[3].activat = false;
+    this.productes[4].activat = true;
+    this.productes[5].activat = false;
+  }
+
+  apple() : void {
+    this.productes[0].activat = true;
+    this.productes[1].activat = true;
+    this.productes[2].activat = false;
+    this.productes[3].activat = false;
+    this.productes[4].activat = false;
+    this.productes[5].activat = false;
+  }
+
+  xiaomi() : void {
+    this.productes[0].activat = false;
+    this.productes[1].activat = false;
+    this.productes[2].activat = false;
+    this.productes[3].activat = false;
+    this.productes[4].activat = true;
+    this.productes[5].activat = false;
+  }
+
+  samsung() : void {
+    this.productes[0].activat = false;
+    this.productes[1].activat = false;
+    this.productes[2].activat = false;
+    this.productes[3].activat = false;
+    this.productes[4].activat = false;
+    this.productes[5].activat = true;
+  }
+
+  realMe() : void {
+    this.productes[0].activat = false;
+    this.productes[1].activat = false;
+    this.productes[2].activat = true;
+    this.productes[3].activat = false;
+    this.productes[4].activat = false;
+    this.productes[5].activat = false;
+  }
+
+  oppo() : void {
+    this.productes[0].activat = false;
+    this.productes[1].activat = false;
+    this.productes[2].activat = false;
+    this.productes[3].activat = true;
+    this.productes[4].activat = false;
+    this.productes[5].activat = false;
   }
 
 
