@@ -32,73 +32,66 @@
 <div class="texto">
   <aside>
     <h3>Envio</h3>
-    <label><input type="checkbox" value="envio_gratis"> Envio gratis</label><br>
-    <label><input type="checkbox" value="envio_1dia"> Recíbelo mañana</label><br>
+    <label><input (click)="envioGratis()" type="radio" name="envio" value="envio_gratis"> Envio gratis</label><br>
+    <label><input (click)="recibeloManana()" type="radio" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
     <h3>Categoria</h3>
-    <label><input type="checkbox" value="apple"> Monitores</label><br>
-    <label><input type="checkbox" value="xiaomi"> Teclados</label><br>
-    <label><input type="checkbox" value="samsung"> Ratones</label><br>
-    <h3>Precio</h3>
-    <label><input type="checkbox" value="20"> 0-20 EUR</label><br>
-    <label><input type="checkbox" value="40"> 21-40 EUR</label><br>
-    <label><input type="checkbox" value="75"> 41-75 EUR</label><br>
-    <label><input type="checkbox" value="100"> 76-99 EUR</label><br>
-    <label><input type="checkbox" value="150"> 100-150 EUR</label><br>
-    <label><input type="checkbox" value="max"> Més de 150 EUR </label><br>
+    <label><input (click)="monitors()" type="radio" name="marca" value="monitors"> Monitores</label><br>
+    <label><input (click)="teclados()" type="radio" name="marca" value="teclats"> Teclados</label><br>
+    <label><input (click)="ratones()" type="radio" name="marca" value="ratolins"> Ratones</label><br>
   </aside>
   <article>
     <div id="resultat">
       <h2>RESULTADOS</h2>
     </div>
     <div>
-      <div class="producto">
+      <div class="producto" *ngIf="productes[0].activat">
         <div class="imgproducto">
           <img src="../../assets/newskill.png">
         </div>
         <div class="titolproducto">
-          <h2>NewSkill Icarus</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>499€ </h3>
+          <h2>{{productes[0].titol}}</h2><br>
+          <p> {{productes[0].envio}}</p>
+          <h3>{{productes[0].preu}}</h3>
         </div>
       </div>
-      <div class="producto">
+      <div class="producto" *ngIf="productes[1].activat">
         <div class="imgproducto">
           <img src="../../assets/k120.png">
         </div>
         <div class="titolproducto">
-          <h2>Logitech K120</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>11€ </h3>
+          <h2>{{productes[1].titol}}</h2><br>
+          <p> {{productes[1].envio}}</p>
+          <h3>{{productes[1].preu}}</h3>
         </div>
       </div>
-      <div class="producto">
+      <div class="producto" *ngIf="productes[2].activat">
         <div class="imgproducto">
           <img src="../../assets/forgeon.png">
         </div>
         <div class="titolproducto">
-          <h2>Forgeon Clutch</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>499€ </h3>
+          <h2>{{productes[2].titol}}</h2><br>
+          <p> {{productes[2].envio}}</p>
+          <h3>{{productes[2].preu}}</h3>
         </div>
       </div>
-      <div class="producto">
+      <div class="producto" *ngIf="productes[3].activat">
         <div class="imgproducto">
           <img src="../../assets/razer.png">
         </div>
         <div class="titolproducto">
-          <h2>Razer Basilisk</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>40€ </h3>
+          <h2>{{productes[3].titol}}</h2><br>
+          <p> {{productes[3].envio}}</p>
+          <h3>{{productes[3].preu}}</h3>
         </div>
       </div>
-      <div class="producto">
+      <div class="producto" *ngIf="productes[4].activat">
         <div class="imgproducto">
           <img src="../../assets/Asus%20P307.png">
         </div>
         <div class="titolproducto">
-          <h2>Asus P307</h2><br>
-          <p> Envio GRATIS</p>
-          <h3>45€ </h3>
+          <h2>{{productes[4].titol}}</h2><br>
+          <p> {{productes[4].envio}}</p>
+          <h3>{{productes[4].preu}}</h3>
         </div>
       </div>
     </div>
