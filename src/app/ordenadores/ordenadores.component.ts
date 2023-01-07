@@ -5,39 +5,50 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './ordenadores.component.html',
   styleUrls: ['./ordenadores.component.css']
 })
-export class OrdenadoresComponent implements OnInit{
+export class OrdenadoresComponent implements OnInit {
 
   productes: any[];
+
   constructor() {
     const producte1 = {
       titol: "MSI Modern 14 Core-i7/16GB/512GB SSD",
       envio: "Envio Gratis",
       preu: "799€",
-      activat: true
+      marca: "MSI",
+      activat1: true,
+      activat2: true
     };
     const producte2 = {
       titol: "HP Omen 16 Core-i7/16GB/1TB SSD",
       envio: "Recíbelo mañana",
       preu: "1219€",
-      activat: true
+      marca: "HP",
+      activat1: true,
+      activat2: true
     };
     const producte3 = {
       titol: "Asus TUF Gaming Core-i5/16GB/512GB",
       envio: "Envio Gratis",
       preu: "999€",
-      activat: true
+      marca: "Asus",
+      activat1: true,
+      activat2: true
     };
     const producte4 = {
       titol: "Asus F515 Core-i5/16GB/512GB",
       envio: "Envio Gratis",
       preu: "499€",
-      activat: true
+      marca: "Asus",
+      activat1: true,
+      activat2: true
     };
     const producte5 = {
       titol: "Apple MacBook Pro M1/16GB/512GB SSD",
       envio: "Recíbelo mañana",
       preu: "2009€",
-      activat: true
+      marca: "Apple",
+      activat1: true,
+      activat2: true
     };
 
     this.productes = [];
@@ -51,51 +62,63 @@ export class OrdenadoresComponent implements OnInit{
   ngOnInit() {
   }
 
-  envioGratis() : void {
-    this.productes[0].activat = true;
-    this.productes[1].activat = false;
-    this.productes[2].activat = true;
-    this.productes[3].activat = true;
-    this.productes[4].activat = false;
+  envioGratis(): void {
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].envio == "Envio Gratis") {
+        this.productes[i].activat1 = true;
+      } else {
+        this.productes[i].activat1 = false;
+      }
+    }
   }
 
-  recibeloManana() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = true;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = true;
+  recibeloManana(): void {
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].envio == "Recíbelo mañana") {
+        this.productes[i].activat1 = true;
+      } else {
+        this.productes[i].activat1 = false;
+      }
+    }
   }
 
-  apple() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = false;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = true;
+  apple(): void {
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].marca == "Apple") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
-  hp() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = true;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = false;
+  hp(): void {
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].marca == "HP") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
-  msi() : void {
-    this.productes[0].activat = true;
-    this.productes[1].activat = false;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = false;
+  msi(): void {
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].marca == "MSI") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
-  asus() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = false;
-    this.productes[2].activat = true;
-    this.productes[3].activat = true;
-    this.productes[4].activat = false;
+  asus(): void {
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].marca == "Asus") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 }

@@ -12,31 +12,41 @@ export class PerifericosComponent implements OnInit{
       titol: "NewSkill Icarus",
       envio: "Envio Gratis",
       preu: "499€",
-      activat: true
+      tipus: "Monitor",
+      activat1: true,
+      activat2: true
     };
     const producte2 = {
       titol: "Logitech K120",
       envio: "Recíbelo mañana",
       preu: "11€",
-      activat: true
+      tipus: "Teclat",
+      activat1: true,
+      activat2: true
     };
     const producte3 = {
       titol: "Forgeon Clutch",
       envio: "Envio Gratis",
       preu: "499€",
-      activat: true
+      tipus: "Teclat",
+      activat1: true,
+      activat2: true
     };
     const producte4 = {
       titol: "Razer Basilisk",
       envio: "Envio Gratis",
       preu: "40€",
-      activat: true
+      tipus: "Ratoli",
+      activat1: true,
+      activat2: true
     };
     const producte5 = {
       titol: "Asus P307",
       envio: "Recíbelo mañana",
       preu: "45€",
-      activat: true
+      tipus: "Ratoli",
+      activat1: true,
+      activat2: true
     };
 
     this.productes = [];
@@ -50,43 +60,53 @@ export class PerifericosComponent implements OnInit{
   ngOnInit() {
   }
 
-  envioGratis() : void {
-    this.productes[0].activat = true;
-    this.productes[1].activat = false;
-    this.productes[2].activat = true;
-    this.productes[3].activat = true;
-    this.productes[4].activat = false;
+  envioGratis(): void {
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].envio == "Envio Gratis") {
+        this.productes[i].activat1 = true;
+      } else {
+        this.productes[i].activat1 = false;
+      }
+    }
   }
 
-  recibeloManana() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = true;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = true;
+  recibeloManana(): void {
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].envio == "Recíbelo mañana") {
+        this.productes[i].activat1 = true;
+      } else {
+        this.productes[i].activat1 = false;
+      }
+    }
   }
 
   monitors() : void {
-    this.productes[0].activat = true;
-    this.productes[1].activat = false;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = false;
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].tipus == "Monitor") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
   teclados() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = true;
-    this.productes[2].activat = true;
-    this.productes[3].activat = false;
-    this.productes[4].activat = false;
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].tipus == "Teclat") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
   ratones() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = false;
-    this.productes[2].activat = false;
-    this.productes[3].activat = true;
-    this.productes[4].activat = true;
+    for (let i = 0; i < 10; i++) {
+      if (this.productes[i].tipus == "Ratoli") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 }

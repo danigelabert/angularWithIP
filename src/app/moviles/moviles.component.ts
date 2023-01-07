@@ -12,37 +12,49 @@ export class MovilesComponent implements OnInit{
         titol: "iPhone 14 Pro Max",
         envio: "Envio Gratis",
         preu: "1499€",
-        activat: true
+        marca: "Apple",
+        activat1: true,
+        activat2: true
       };
       const producte2 = {
         titol: "iPhone 13",
         envio: "Recíbelo mañana",
         preu: "999€",
-        activat: true
+        marca: "Apple",
+        activat1: true,
+        activat2: true
       };
       const producte3 = {
         titol: "Realme GT Master Edition",
         envio: "Envio Gratis",
         preu: "330€",
-        activat: true
+        marca: "Realme",
+        activat1: true,
+        activat2: true
       };
       const producte4 = {
         titol: "Oppo Find X3 Pro",
         envio: "Envio Gratis",
         preu: "889€",
-        activat: true
+        marca: "Oppo",
+        activat1: true,
+        activat2: true
       };
       const producte5 = {
         titol: "Xiaomi 12T Pro",
         envio: "Recíbelo mañana",
         preu: "1450€",
-        activat: true
+        marca: "Xiaomi",
+        activat1: true,
+        activat2: true
       };
       const producte6 = {
         titol: "Samsung S22 Ultra",
         envio: "Envio Gratis",
         preu: "1459€",
-        activat: true
+        marca: "Samsung",
+        activat1: true,
+        activat2: true
       };
       this.productes = [];
       this.productes.push(producte1);
@@ -60,67 +72,74 @@ export class MovilesComponent implements OnInit{
   ngOnInit(){
   }
 
-  envioGratis() : void {
-    this.productes[0].activat = true;
-    this.productes[1].activat = false;
-    this.productes[2].activat = true;
-    this.productes[3].activat = true;
-    this.productes[4].activat = false;
-    this.productes[5].activat = true;
+  envioGratuit() : void {
+    for (let i=0; i<10; i++)  {
+      if (this.productes[i].envio == "Envio Gratis") {
+        this.productes[i].activat1 = true;
+      } else {
+        this.productes[i].activat1 = false;
+      }
+    }
   }
 
-  recibeloManana() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = true;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = true;
-    this.productes[5].activat = false;
+  recibeloMananaa() : void {
+    for (let i=0; i<10; i++)  {
+      if (this.productes[i].envio == "Recíbelo mañana") {
+        this.productes[i].activat1 = true;
+      } else {
+        this.productes[i].activat1 = false;
+      }
+    }
   }
 
   apple() : void {
-    this.productes[0].activat = true;
-    this.productes[1].activat = true;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = false;
-    this.productes[5].activat = false;
+    for (let i=0; i<10; i++)  {
+      if (this.productes[i].marca == "Apple") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
   xiaomi() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = false;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = true;
-    this.productes[5].activat = false;
+    for (let i=0; i<10; i++)  {
+      if (this.productes[i].marca == "Xiaomi") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
   samsung() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = false;
-    this.productes[2].activat = false;
-    this.productes[3].activat = false;
-    this.productes[4].activat = false;
-    this.productes[5].activat = true;
+    for (let i=0; i<10; i++)  {
+      if (this.productes[i].marca == "Samsung") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
   realMe() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = false;
-    this.productes[2].activat = true;
-    this.productes[3].activat = false;
-    this.productes[4].activat = false;
-    this.productes[5].activat = false;
+    for (let i=0; i<10; i++)  {
+      if (this.productes[i].marca == "Realme") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
   oppo() : void {
-    this.productes[0].activat = false;
-    this.productes[1].activat = false;
-    this.productes[2].activat = false;
-    this.productes[3].activat = true;
-    this.productes[4].activat = false;
-    this.productes[5].activat = false;
+    for (let i=0; i<10; i++)  {
+      if (this.productes[i].marca == "Oppo") {
+        this.productes[i].activat2 = true;
+      } else {
+        this.productes[i].activat2 = false;
+      }
+    }
   }
 
 

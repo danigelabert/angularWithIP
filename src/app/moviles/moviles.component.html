@@ -19,8 +19,8 @@
 <div class="texto">
   <aside>
     <h3>Envio</h3>
-    <label><input (click)="envioGratis()" type="radio" name="envio" value="envio_gratis"> Envio gratis</label><br>
-    <label><input (click)="recibeloManana()" type="radio" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
+    <label><input (click)="envioGratuit()" type="radio" name="envio" value="envio_gratis"> Envio gratis</label><br>
+    <label><input (click)="recibeloMananaa()" type="radio" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
     <h3>Marca</h3>
     <label><input (click)="apple()" type="radio" name="marca" value="apple"> Apple</label><br>
     <label><input (click)="xiaomi()" type="radio" name="marca" value="xiaomi"> Xiaomi</label><br>
@@ -33,7 +33,7 @@
       <h2>RESULTADOS</h2>
     </div>
     <div>
-      <div class="producto1" *ngIf="productes[0].activat">
+      <div class="producto1" *ngIf="productes[0].activat1 && productes[0].activat2">
         <div class="imgproducto">
           <img src="../../assets/iPhone%2014%20Pro%20Max.png">
         </div>
@@ -44,7 +44,7 @@
           <button class="ca" id="p1" ></button>
         </div>
       </div>
-      <div class="producto2" *ngIf="productes[1].activat">
+      <div class="producto2" *ngIf="productes[1].activat1 && productes[1].activat2">
         <div class="imgproducto">
           <img src="../../assets/iPhone%2013.png">
         </div>
@@ -55,7 +55,7 @@
           <button class="ca" id="p2" onClick="afegir(this.id)"></button>
         </div>
       </div>
-      <div class="producto3" *ngIf="productes[2].activat">
+      <div class="producto3" *ngIf="productes[2].activat1 && productes[2].activat2">
         <div class="imgproducto">
           <img src="../../assets/realme.png">
         </div>
@@ -65,7 +65,7 @@
           <h3>{{productes[2].preu}}</h3>
         </div>
       </div>
-      <div class="producto4" *ngIf="productes[3].activat">
+      <div class="producto4" *ngIf="productes[3].activat1 && productes[3].activat2">
         <div class="imgproducto">
           <img src="../../assets/oppo.png">
         </div>
@@ -75,7 +75,7 @@
           <h3>{{productes[3].preu}}</h3>
         </div>
       </div>
-      <div class="producto5" *ngIf="productes[4].activat">
+      <div class="producto5" *ngIf="productes[4].activat1 && productes[4].activat2">
         <div class="imgproducto">
           <img src="../../assets/Xiaomi.png">
         </div>
@@ -85,7 +85,7 @@
           <h3>{{productes[4].preu}}</h3>
         </div>
       </div>
-      <div class="producto6" *ngIf="productes[5].activat">
+      <div class="producto6" *ngIf="productes[5].activat1 && productes[5].activat2">
         <div class="imgproducto">
           <img src="../../assets/s22%20ultra.png">
         </div>
