@@ -19,6 +19,7 @@ export class FormularioComponent implements OnInit{
   valorLogIn($myParam: string = ''){
     var usr=this.s.getUser()
     var pasw=this.s.getPassword()
+
     if (usr==this.usuari && pasw==this.password){
       const nav: string[] = ['/pagina-web']
       if($myParam.length) {
@@ -26,7 +27,6 @@ export class FormularioComponent implements OnInit{
       }
       this.router.navigate(nav)
     }
-    console.log(this.usuari+" "+this.password)
   }
 
 

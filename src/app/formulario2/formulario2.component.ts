@@ -24,7 +24,6 @@ export class Formulario2Component implements OnInit{
       nav.push($myParam);
     }
     this.router.navigate(nav)
-    console.log(this.usuari+" "+this.password)
     this.s.setNom(this.usuari, this.password)
   }
 }

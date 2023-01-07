@@ -17,7 +17,6 @@ export class PaginaWebComponent implements OnInit{
     const nombre=this.s.getUser()
     const c=undefined
     if (nombre==c){
-      console.log("no esta")
     } else {
       let boton=document.getElementById("redondo")!;
       boton.style.visibility="hidden"

@@ -291,11 +291,13 @@ nav{
 /*els altres productes*/
 #producto1, #producto2, #producto3, #producto4, #producto5, #producto6 {
   float: left;
-  margin-left: 1.5em;
+  margin-left: 1em;
   margin-top: 1em;
   width: 22.5%;
   height: 30em;
   background-color: #d6d6d6;
+  border-radius: 15px;
+  padding: 10px;
   /*border: black 1px solid;*/
 }
 
@@ -321,6 +323,8 @@ nav{
   height: 15em;
   text-align: center;
   background-color: #848484;
+  border-radius: 15px;
+  padding: 5px;
   /*border: black 1px solid;*/
 }
 
