@@ -26,4 +26,7 @@ export class ServeiService {
   pegar(){
     return localStorage.getItem('todo')
   }
+
+
+
 }

@@ -14,7 +14,7 @@ export class PaginaWebComponent implements OnInit{
   }
 
   ngOnInit() {
-    const nombre=this.s.getUser()
+    const nombre= localStorage.getItem("nombre")
     const c=undefined
     if (nombre==c){
     } else {

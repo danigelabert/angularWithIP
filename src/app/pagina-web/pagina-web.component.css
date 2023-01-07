@@ -132,12 +132,17 @@ footer{
   border-radius: 15px;
   margin-top: 11.5%;
   margin-left: 3px;
+  background-image: url("../../assets/exit.png");
+  background-size: cover;
+  border: none;
+  background-color: transparent;
   visibility: hidden;
 }
 
 #logout:hover{
-  background-color: #9b9b9b;
-  transition: 1s;
+  width: 52px;
+  height: 52px;
+  transition: 0.5s;
   cursor: pointer;
 }
 
