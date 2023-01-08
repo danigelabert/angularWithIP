@@ -19,14 +19,4 @@ export class ServeiService {
     return localStorage.getItem('password')
   }
 
-  copiar(x:any){
-    localStorage.setItem('todo',x)!;
-  }
-
-  pegar(){
-    return localStorage.getItem('todo')
-  }
-
-
-
 }

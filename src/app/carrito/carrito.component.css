@@ -46,9 +46,9 @@ footer{
   display: flex;
   flex-flow: row;
   width: 99%;
+  height: 100%;
   padding: 0;
   margin: 5px;
-  height: auto;
 }
 
 .logo{
@@ -313,4 +313,13 @@ footer{
   margin: auto;
   height: auto;
   max-height: 100%;
+}
+
+#subject{
+  background-color: black;
+  width: 50%;
+}
+
+.bonito{
+  background-color: black;
 }
