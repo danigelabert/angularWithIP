@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {NgForm} from '@angular/forms';
 import {Router} from "@angular/router";
 import {ServeiService} from "../servei.service";
 
@@ -19,13 +18,14 @@ export class FormularioComponent implements OnInit{
   valorLogIn($myParam: string = ''){
     var usr=this.s.getUser()
     var pasw=this.s.getPassword()
+
     if (usr==this.usuari && pasw==this.password){
       const nav: string[] = ['/pagina-web']
       if($myParam.length) {
         nav.push($myParam);
       }
       this.router.navigate(nav)
+      localStorage.setItem("nombre",usr!)
     }
-    console.log(this.usuari+" "+this.password)
   }
 }

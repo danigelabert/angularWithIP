@@ -14,10 +14,9 @@ export class PaginaWebComponent implements OnInit{
   }
 
   ngOnInit() {
-    const nombre=this.s.getUser()
+    const nombre= localStorage.getItem("nombre")
     const c=undefined
     if (nombre==c){
-      console.log("no esta")
     } else {
       let boton=document.getElementById("redondo")!;
       boton.style.visibility="hidden"

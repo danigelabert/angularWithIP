@@ -18,4 +18,5 @@ export class ServeiService {
   getPassword(){
     return localStorage.getItem('password')
   }
+
 }
