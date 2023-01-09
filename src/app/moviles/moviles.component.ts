@@ -1,5 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
+function $(s: string) {
+
+}
+
 @Component({
   selector: 'app-moviles',
   templateUrl: './moviles.component.html',
@@ -7,6 +11,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MovilesComponent implements OnInit{
     productes: any[];
+  private output: any;
     constructor() {
       const producte1 = {
         titol: "iPhone 14 Pro Max",
@@ -66,6 +71,17 @@ export class MovilesComponent implements OnInit{
    }
 
   ngOnInit(){
+    const btn = document.querySelector('.a1')!;
+    const radioButtons = document.querySelectorAll('input[name="envio"]');
+    btn.addEventListener("click", () => {
+      // @ts-ignore
+      for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+          alert("click")
+          break;
+        }
+      }
+    });
   }
 
   toggle(event: Event): void {
@@ -84,6 +100,7 @@ export class MovilesComponent implements OnInit{
       localStorage.setItem("producto6", document.getElementById('producto6')!.innerHTML)
     }
   }
+
 
   envioGratuit() : void {
     for (let i=0; i<10; i++)  {

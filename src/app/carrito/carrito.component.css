@@ -2,9 +2,11 @@
   font-family: Arial, serif;
 }
 
+
 body{
   display: flex;
   flex-flow: column;
+  height: 100%;
   background-color: whitesmoke;
   margin: 0;
 }
@@ -31,8 +33,6 @@ article{
   padding: 2em;
   height: auto;
 }
-
-
 
 footer{
   background-color: #616161;
@@ -322,4 +322,63 @@ footer{
 
 .bonito{
   background-color: black;
+}
+
+.producto1, .producto2, .producto3, .producto4, .producto5, .producto6{
+  float: left;
+  margin-left: 1em;
+  margin-top: 1em;
+  width: 22.5%;
+  height: 30em;
+  background-color: #d6d6d6;
+  border-radius: 15px;
+  padding: 9px;
+}
+
+.ca{
+  background-image: url("../../assets/carrito.png");
+  background-position: center;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 75%;
+}
+
+.ca:hover{
+  background-color: #9b9b9b;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.imgproducto {
+  width: 100%;
+  height: 15em;
+  text-align: center;
+  background-color: #848484;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*border: black 1px solid;*/
+}
+
+.imgproducto img {
+  width: auto;
+  max-width: 100%;
+  margin: auto;
+  height: auto;
+  max-height: 100%;
+}
+
+#producto1, #producto2, #producto3, #producto4, #producto5, #producto6 {
+  float: left;
+  margin-left: 1em;
+  margin-top: 1em;
+  width: 22.5%;
+  height: 30em;
+  background-color: #d6d6d6;
+  border-radius: 15px;
+  padding: 9px;
+  /*border: black 1px solid;*/
 }

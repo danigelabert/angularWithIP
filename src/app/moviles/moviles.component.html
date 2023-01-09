@@ -15,8 +15,8 @@
 <div class="texto">
   <aside>
     <h3>Envio</h3>
-    <label><input (click)="envioGratuit()" type="radio" name="envio" value="envio_gratis"> Envio gratis</label><br>
-    <label><input (click)="recibeloMananaa()" type="radio" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
+    <label><input class="a1" type="radio" name="envio" value="envio_gratis"> Envio gratis</label><br>
+    <label><input class="a1" type="radio" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
     <h3>Marca</h3>
     <label><input (click)="apple()" type="radio" name="marca" value="apple"> Apple</label><br>
     <label><input (click)="xiaomi()" type="radio" name="marca" value="xiaomi"> Xiaomi</label><br>
@@ -46,7 +46,7 @@
         </div>
         <div class="titolproducto">
           <h2 id="nom2">{{productes[1].titol}}</h2><br>
-          <p id="envio2">{{productes[1].titol}}</p>
+          <p id="envio2">{{productes[1].envio}}</p>
           <h3 id="precio2">{{productes[1].preu}}</h3>
           <button class="ca" id="p2" (click)="toggle($event)"></button>
         </div>
