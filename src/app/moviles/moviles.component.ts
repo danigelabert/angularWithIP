@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ServeiService} from "../servei.service";
 
 function $(s: string) {
 
@@ -10,9 +11,9 @@ function $(s: string) {
   styleUrls: ['./moviles.component.css']
 })
 export class MovilesComponent implements OnInit{
-    productes: any[];
+  productes: any[];
   private output: any;
-    constructor() {
+    constructor(private s: ServeiService) {
       const producte1 = {
         titol: "iPhone 14 Pro Max",
         envio: "Envio Gratis",
@@ -86,19 +87,40 @@ export class MovilesComponent implements OnInit{
 
   toggle(event: Event): void {
     let elementId: string = (event.target as Element).id;
+    var suma: any;
     if (elementId=="p1"){
       localStorage.setItem("producto1", document.getElementById('producto1')!.innerHTML)
+      suma=document.getElementById('precio1')!.innerHTML
     } else if (elementId=="p2"){
       localStorage.setItem("producto2", document.getElementById('producto2')!.innerHTML)
+      suma=document.getElementById('precio2')!.innerHTML
     } else if (elementId=="p3"){
       localStorage.setItem("producto3", document.getElementById('producto3')!.innerHTML)
+      suma=document.getElementById('precio3')!.innerHTML
     } else if (elementId=="p4"){
       localStorage.setItem("producto4", document.getElementById('producto4')!.innerHTML)
+      suma=document.getElementById('precio4')!.innerHTML
     } else if (elementId=="p5"){
       localStorage.setItem("producto5", document.getElementById('producto5')!.innerHTML)
+      suma=document.getElementById('precio5')!.innerHTML
     } else if (elementId=="p6"){
       localStorage.setItem("producto6", document.getElementById('producto6')!.innerHTML)
+      suma=document.getElementById('precio6')!.innerHTML
     }
+    function preu(){
+      var res=localStorage.getItem('preu')!
+      var x=parseInt(res)
+      var z=parseInt(suma)
+      var y= x+z
+      if (isNaN(y)){
+        y=z;
+      } else {
+        y= x+z
+      }
+      localStorage.setItem('preu',y.toString())
+      console.log(localStorage.getItem('preu'))
+    }
+    preu()
   }
 
 
