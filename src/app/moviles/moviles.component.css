@@ -40,6 +40,7 @@ aside{
   height: auto;
   display: flex;
   flex-flow: column;
+  padding-left: 10px;
 }
 
 footer{
@@ -289,14 +290,44 @@ nav{
 }
 
 /*els altres productes*/
-.producto {
+.producto1, .producto2, .producto3, .producto4, .producto5, .producto6{
   float: left;
-  margin-left: 1.5em;
+  margin-left: 1em;
   margin-top: 1em;
   width: 22.5%;
   height: 30em;
   background-color: #d6d6d6;
+  border-radius: 15px;
+  padding: 9px;
+}
+
+#producto1, #producto2, #producto3, #producto4, #producto5, #producto6 {
+  float: left;
+  margin-left: 1em;
+  margin-top: 1em;
+  width: 22.5%;
+  height: 30em;
+  background-color: #d6d6d6;
+  border-radius: 15px;
+  padding: 9px;
   /*border: black 1px solid;*/
+}
+
+.ca{
+  background-image: url("../../assets/carrito.png");
+  background-position: center;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 75%;
+}
+
+.ca:hover{
+  background-color: #9b9b9b;
+  transition: 1s;
+  cursor: pointer;
 }
 
 .imgproducto {
@@ -304,6 +335,9 @@ nav{
   height: 15em;
   text-align: center;
   background-color: #848484;
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   /*border: black 1px solid;*/
 }
 

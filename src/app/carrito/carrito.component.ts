@@ -13,7 +13,7 @@ export class CarritoComponent implements OnInit{
   ngOnInit() {
 
     const subject = document.querySelector('#subject')!;
-    if (localStorage.getItem("producto1") == null){
+    if (localStorage.getItem("producto1")! == null){
     } else {
       subject.insertAdjacentHTML('afterend', localStorage.getItem("producto1")!);
     }
@@ -21,7 +21,7 @@ export class CarritoComponent implements OnInit{
     } else {
       subject.insertAdjacentHTML('afterend', localStorage.getItem("producto2")!);
     }
-    if ( localStorage.getItem("producto3")!== null){
+    if ( localStorage.getItem("producto3")! == null){
     } else {
       subject.insertAdjacentHTML('afterend', localStorage.getItem("producto3")!);
     }
