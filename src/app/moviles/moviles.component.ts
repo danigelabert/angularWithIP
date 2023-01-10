@@ -12,7 +12,6 @@ function $(s: string) {
 })
 export class MovilesComponent implements OnInit{
   productes: any[];
-  private output: any;
     constructor(private s: ServeiService) {
       const producte1 = {
         titol: "iPhone 14 Pro Max",
@@ -67,19 +66,8 @@ export class MovilesComponent implements OnInit{
 
   ngOnInit(){
 
-    const btn = document.querySelector('.a1')!;
-    const radioButtons = document.querySelectorAll('input[name="envio"]');
-    btn.addEventListener("click", () => {
-      // @ts-ignore
-      for (const radioButton of radioButtons) {
-        if (radioButton.checked) {
-          alert("click")
-          break;
-        }
-      }
-    });
-
   }
+
   prova(){
     var element1 = <HTMLInputElement> document.getElementById("a1");
     var element2 = <HTMLInputElement> document.getElementById("a2");
@@ -132,58 +120,36 @@ export class MovilesComponent implements OnInit{
       a7=false
     }
 
+    this.productes[0].activat1 = false;
+    this.productes[2].activat1 = false;
+    this.productes[3].activat1 = false;
+    this.productes[5].activat1 = false;
+    this.productes[1].activat1 = false;
+    this.productes[4].activat1 = false;
 
     if (a3==true){
       this.productes[0].activat1 = true;
       this.productes[1].activat1 = true;
-      this.productes[2].activat1 = false;
-      this.productes[3].activat1 = false;
-      this.productes[4].activat1 = false;
-      this.productes[5].activat1 = false;
     }
     if (a4==true){
-      this.productes[0].activat1 = false;
-      this.productes[1].activat1 = false;
-      this.productes[2].activat1 = false;
-      this.productes[3].activat1 = false;
       this.productes[4].activat1 = true;
-      this.productes[5].activat1 = false;
     }
     if (a5==true){
-      this.productes[0].activat1 = false;
-      this.productes[1].activat1 = false;
-      this.productes[2].activat1 = false;
-      this.productes[3].activat1 = false;
-      this.productes[4].activat1 = false;
       this.productes[5].activat1 = true;
     }
     if (a6==true){
-      this.productes[0].activat1 = false;
-      this.productes[1].activat1 = false;
       this.productes[2].activat1 = true;
-      this.productes[3].activat1 = false;
-      this.productes[4].activat1 = false;
-      this.productes[5].activat1 = false;
     }
     if (a7==true){
-      this.productes[0].activat1 = false;
-      this.productes[1].activat1 = false;
-      this.productes[2].activat1 = false;
       this.productes[3].activat1 = true;
-      this.productes[4].activat1 = false;
-      this.productes[5].activat1 = false;
     }
+
     if (a1==true) {
       if (a3 == true || a4 == true || a5 == true || a6 == true || a7==true) {
         if (this.productes[0].activat1 == true) {
           this.productes[0].activat1 = true;
         } else {
           this.productes[0].activat1 = false;
-        }
-        if (this.productes[1].activat1 == true) {
-          this.productes[1].activat1 = true;
-        } else {
-          this.productes[1].activat1 = false;
         }
         if (this.productes[2].activat1 == true) {
           this.productes[2].activat1 = true;
@@ -195,16 +161,13 @@ export class MovilesComponent implements OnInit{
         } else {
           this.productes[3].activat1 = false;
         }
-        if (this.productes[4].activat1 == true) {
-          this.productes[4].activat1 = true;
-        } else {
-          this.productes[4].activat1 = false;
-        }
         if (this.productes[5].activat1 == true) {
           this.productes[5].activat1 = true;
         } else {
           this.productes[5].activat1 = false;
         }
+        this.productes[1].activat1 = false;
+        this.productes[4].activat1 = false;
       } else {
         this.productes[0].activat1 = true;
         this.productes[2].activat1 = true;
@@ -214,39 +177,23 @@ export class MovilesComponent implements OnInit{
         this.productes[4].activat1 = false;
       }
     }
-
     if (a2==true){
         if(a3==true || a4==true || a5==true || a6==true || a7==true){
-          if (this.productes[0].activat1 == true){
-            this.productes[0].activat1 = true;
-          } else {
-            this.productes[0].activat1 = false;
-          }
+
           if (this.productes[1].activat1 == true){
             this.productes[1].activat1 = true;
           } else {
             this.productes[1].activat1 = false;
-          }
-          if (this.productes[2].activat1 == true){
-            this.productes[2].activat1 = true;
-          } else {
-            this.productes[2].activat1 = false;
-          }
-          if (this.productes[3].activat1 == true){
-            this.productes[3].activat1 = true;
-          } else {
-            this.productes[3].activat1 = false;
           }
           if (this.productes[4].activat1 == true){
             this.productes[4].activat1 = true;
           } else {
             this.productes[4].activat1 = false;
           }
-          if (this.productes[5].activat1 == true){
-            this.productes[5].activat1 = true;
-          } else {
-            this.productes[5].activat1 = false;
-          }
+          this.productes[0].activat1 = false;
+          this.productes[2].activat1 = false;
+          this.productes[3].activat1 = false;
+          this.productes[5].activat1 = false;
         } else {
           this.productes[0].activat1 = false;
           this.productes[1].activat1 = true;
@@ -256,8 +203,7 @@ export class MovilesComponent implements OnInit{
           this.productes[5].activat1 = false;
         }
     }
-
-    if (a1==false && a2==false && a3==false && a4==false && a5==false && a6==false){
+    if (a1==false && a2==false && a3==false && a4==false && a5==false && a6==false && a7==false){
         this.productes[0].activat1 = true;
         this.productes[1].activat1 = true;
         this.productes[2].activat1 = true;
@@ -267,6 +213,8 @@ export class MovilesComponent implements OnInit{
     }
 
   }
+
+
   toggle(event: Event): void {
     let elementId: string = (event.target as Element).id;
     var suma: any;
@@ -303,77 +251,6 @@ export class MovilesComponent implements OnInit{
       console.log(localStorage.getItem('preu'))
     }
     preu()
-  }
-
-
-  envioGratuit() : void {
-    for (let i=0; i<10; i++)  {
-      if (this.productes[i].envio == "Envio Gratis") {
-        this.productes[i].activat1 = true;
-      } else {
-        this.productes[i].activat1 = false;
-      }
-    }
-  }
-
-  recibeloMananaa() : void {
-    for (let i=0; i<10; i++)  {
-      if (this.productes[i].envio == "Recíbelo mañana") {
-        this.productes[i].activat1 = true;
-      } else {
-        this.productes[i].activat1 = false;
-      }
-    }
-  }
-
-  apple() : void {
-    for (let i=0; i<10; i++)  {
-      if (this.productes[i].marca == "Apple") {
-        this.productes[i].activat2 = true;
-      } else {
-        this.productes[i].activat2 = false;
-      }
-    }
-  }
-
-  xiaomi() : void {
-    for (let i=0; i<10; i++)  {
-      if (this.productes[i].marca == "Xiaomi") {
-        this.productes[i].activat2 = true;
-      } else {
-        this.productes[i].activat2 = false;
-      }
-    }
-  }
-
-  samsung() : void {
-    for (let i=0; i<10; i++)  {
-      if (this.productes[i].marca == "Samsung") {
-        this.productes[i].activat2 = true;
-      } else {
-        this.productes[i].activat2 = false;
-      }
-    }
-  }
-
-  realMe() : void {
-    for (let i=0; i<10; i++)  {
-      if (this.productes[i].marca == "Realme") {
-        this.productes[i].activat2 = true;
-      } else {
-        this.productes[i].activat2 = false;
-      }
-    }
-  }
-
-  oppo() : void {
-    for (let i=0; i<10; i++)  {
-      if (this.productes[i].marca == "Oppo") {
-        this.productes[i].activat2 = true;
-      } else {
-        this.productes[i].activat2 = false;
-      }
-    }
   }
 
 

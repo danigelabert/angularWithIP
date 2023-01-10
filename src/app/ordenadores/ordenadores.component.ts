@@ -97,6 +97,44 @@ export class OrdenadoresComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggle(event: Event): void {
+    let elementId: string = (event.target as Element).id;
+    var suma: any;
+
+    if (elementId=="p7"){
+      localStorage.setItem("producto7", document.getElementById('producto7')!.innerHTML)
+      suma=document.getElementById('precio7')!.innerHTML
+    } else if (elementId=="p8"){
+      localStorage.setItem("producto8", document.getElementById('producto8')!.innerHTML)
+      suma=document.getElementById('precio8')!.innerHTML
+    } else if (elementId=="p9"){
+      localStorage.setItem("producto9", document.getElementById('producto9')!.innerHTML)
+      suma=document.getElementById('precio9')!.innerHTML
+    } else if (elementId=="p10"){
+      localStorage.setItem("producto10", document.getElementById('producto10')!.innerHTML)
+      suma=document.getElementById('precio10')!.innerHTML
+    } else if (elementId=="p11"){
+      localStorage.setItem("producto11", document.getElementById('producto11')!.innerHTML)
+      suma=document.getElementById('precio11')!.innerHTML
+    }
+    console.log(localStorage.getItem("producto9"))
+
+    function preu(){
+      var res=localStorage.getItem('preu')!
+      var x=parseInt(res)
+      var z=parseInt(suma)
+      var y= x+z
+      if (isNaN(y)){
+        y=z;
+      } else {
+        y= x+z
+      }
+      localStorage.setItem('preu',y.toString())
+      console.log(localStorage.getItem('preu'))
+    }
+    preu()
+  }
+
   setBotton(): void {
     this.bottons
   }

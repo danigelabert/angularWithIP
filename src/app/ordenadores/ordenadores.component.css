@@ -289,14 +289,33 @@ nav{
 }
 
 /*els altres productes*/
-.producto {
+#producto7, #producto8, #producto9, #producto10, #producto11{
   float: left;
-  margin-left: 1.5em;
+  margin-left: 1em;
   margin-top: 1em;
   width: 22.5%;
   height: 30em;
   background-color: #d6d6d6;
-  /*border: black 1px solid;*/
+  border-radius: 15px;
+  padding: 9px;
+}
+
+.ca{
+  background-image: url("../../assets/carrito.png");
+  background-position: center;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 75%;
+  margin-bottom: 30px;
+}
+
+.ca:hover{
+  background-color: #9b9b9b;
+  transition: 1s;
+  cursor: pointer;
 }
 
 .imgproducto {
@@ -304,7 +323,9 @@ nav{
   height: 15em;
   text-align: center;
   background-color: #848484;
-  /*border: black 1px solid;*/
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .imgproducto img {

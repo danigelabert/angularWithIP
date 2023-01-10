@@ -60,6 +60,43 @@ export class PerifericosComponent implements OnInit{
   ngOnInit() {
   }
 
+  toggle(event: Event): void {
+    let elementId: string = (event.target as Element).id;
+    var suma: any;
+
+    if (elementId=="p12"){
+      localStorage.setItem("producto12", document.getElementById('producto12')!.innerHTML)
+      suma=document.getElementById('precio12')!.innerHTML
+    } else if (elementId=="p13"){
+      localStorage.setItem("producto13", document.getElementById('producto13')!.innerHTML)
+      suma=document.getElementById('precio13')!.innerHTML
+    } else if (elementId=="p14"){
+      localStorage.setItem("producto14", document.getElementById('producto14')!.innerHTML)
+      suma=document.getElementById('precio14')!.innerHTML
+    } else if (elementId=="p15"){
+      localStorage.setItem("producto15", document.getElementById('producto15')!.innerHTML)
+      suma=document.getElementById('precio15')!.innerHTML
+    } else if (elementId=="p16"){
+      localStorage.setItem("producto16", document.getElementById('producto16')!.innerHTML)
+      suma=document.getElementById('precio16')!.innerHTML
+    }
+
+    function preu(){
+      var res=localStorage.getItem('preu')!
+      var x=parseInt(res)
+      var z=parseInt(suma)
+      var y= x+z
+      if (isNaN(y)){
+        y=z;
+      } else {
+        y= x+z
+      }
+      localStorage.setItem('preu',y.toString())
+      console.log(localStorage.getItem('preu'))
+    }
+    preu()
+  }
+
   envioGratis(): void {
     for (let i = 0; i < 10; i++) {
       if (this.productes[i].envio == "Envio Gratis") {

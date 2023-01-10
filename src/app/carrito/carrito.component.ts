@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class CarritoComponent implements OnInit{
   preu:any;
-  constructor(private router: Router) {
+  constructor() {
   }
   ngOnInit() {
     const subject = document.querySelector('#subject')!;
@@ -37,6 +37,49 @@ export class CarritoComponent implements OnInit{
     } else {
       subject.insertAdjacentHTML('afterend', localStorage.getItem("producto6")!);
     }
+
+    if ( localStorage.getItem("producto7")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto7")!);
+    }
+    if ( localStorage.getItem("producto8")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto8")!);
+    }
+    if ( localStorage.getItem("producto9")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto9")!);
+    }
+    if ( localStorage.getItem("producto10")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto10")!);
+    }
+    if ( localStorage.getItem("producto11")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto11")!);
+    }
+
+    if ( localStorage.getItem("producto12")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto12")!);
+    }
+    if ( localStorage.getItem("producto13")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto13")!);
+    }
+    if ( localStorage.getItem("producto14")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto14")!);
+    }
+    if ( localStorage.getItem("producto15")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto15")!);
+    }
+    if ( localStorage.getItem("producto16")! == null){
+    } else {
+      subject.insertAdjacentHTML('afterend', localStorage.getItem("producto16")!);
+    }
+
     if (localStorage.getItem('preu')==null){
 
     } else {

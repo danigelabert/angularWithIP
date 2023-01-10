@@ -25,25 +25,6 @@
     <label><input (click)="prova()" id="a7" type="checkbox" name="marca" value="oppo"> Oppo</label><br>
   </aside>
 
-  <script>
-    // var checkbox = document.getElementById('a1');
-    // var checkbox = document.getElementById('a1'||'a2'||'a3'||'a4'||'a5'||'a6'||'a7');
-    // checkbox.addEventListener("change", validaCheckbox, false);
-    // function validaCheckbox()
-    // {
-    //   var checked = checkbox.checked;
-    //   if(checked){
-    //     alert('checkbox1 esta seleccionado');
-    //   }
-    // }
-
-
-    if ($('#a1').is(':checked') ) {
-      alert("Checkbox seleccionado");
-    }
-
-  </script>
-
 
   <article>
     <div id="resultat">
@@ -66,7 +47,7 @@
           <img id="img2" src="../../assets/iPhone%2013.png">
         </div>
         <div class="titolproducto">
-          <h2 id="nom2">{{productes[1].titol}}</h2><br>
+          <h2 id="nom2" class="iphone">{{productes[1].titol}}</h2><br>
           <p id="envio2">{{productes[1].envio}}</p>
           <h3 id="precio2">{{productes[1].preu}}</h3>
           <button class="ca" id="p2" (click)="toggle($event)"></button>

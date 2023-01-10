@@ -289,17 +289,7 @@ nav{
   padding-left: 2em;
 }
 
-/*els altres productes*/
-.producto1, .producto2, .producto3, .producto4, .producto5, .producto6{
-  float: left;
-  margin-left: 1em;
-  margin-top: 1em;
-  width: 22.5%;
-  height: 30em;
-  background-color: #d6d6d6;
-  border-radius: 15px;
-  padding: 9px;
-}
+
 
 #producto1, #producto2, #producto3, #producto4, #producto5, #producto6 {
   float: left;
@@ -338,7 +328,6 @@ nav{
   border-radius: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
-  /*border: black 1px solid;*/
 }
 
 .imgproducto img {
