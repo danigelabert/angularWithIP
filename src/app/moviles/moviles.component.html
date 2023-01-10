@@ -15,14 +15,14 @@
 <div class="texto">
   <aside>
     <h3>Envio</h3>
-    <label><input onclick="validaCheckbox()" id="a1" type="checkbox" name="envio" value="envio_gratis"> Envio gratis</label><br>
-    <label><input onclick="validaCheckbox()" id="a2" type="checkbox" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
+    <label><input (click)="prova()" id="a1" type="checkbox" name="envio" value="envio_gratis"> Envio gratis</label><br>
+    <label><input (click)="prova()" id="a2" type="checkbox" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
     <h3>Marca</h3>
-    <label><input onclick="validaCheckbox()" id="a3" type="checkbox" name="marca" value="apple"> Apple</label><br>
-    <label><input onclick="validaCheckbox()" id="a4" type="checkbox" name="marca" value="xiaomi"> Xiaomi</label><br>
-    <label><input onclick="validaCheckbox()" id="a5" type="checkbox" name="marca" value="samsung"> Samsung</label><br>
-    <label><input onclick="validaCheckbox()" id="a6" type="checkbox" name="marca" value="realme"> Real me</label><br>
-    <label><input onclick="validaCheckbox()" id="a7" type="checkbox" name="marca" value="oppo"> Oppo</label><br>
+    <label><input (click)="prova()" id="a3" type="checkbox" name="marca" value="apple"> Apple</label><br>
+    <label><input (click)="prova()" id="a4" type="checkbox" name="marca" value="xiaomi"> Xiaomi</label><br>
+    <label><input (click)="prova()" id="a5" type="checkbox" name="marca" value="samsung"> Samsung</label><br>
+    <label><input (click)="prova()" id="a6" type="checkbox" name="marca" value="realme"> Real me</label><br>
+    <label><input (click)="prova()" id="a7" type="checkbox" name="marca" value="oppo"> Oppo</label><br>
   </aside>
 
   <script>
@@ -37,6 +37,7 @@
     //   }
     // }
 
+
     if ($('#a1').is(':checked') ) {
       alert("Checkbox seleccionado");
     }
@@ -49,7 +50,7 @@
       <h2>RESULTADOS</h2>
     </div>
     <div>
-      <div id="producto1" *ngIf="productes[0].activat1 && productes[0].activat2">
+      <div id="producto1" *ngIf="productes[0].activat1">
         <div class="imgproducto">
           <img id="img1" src="../../assets/iPhone%2014%20Pro%20Max.png">
         </div>
@@ -60,7 +61,7 @@
           <button class="ca" id="p1" (click)="toggle($event)"></button>
         </div>
       </div>
-      <div id="producto2" *ngIf="productes[1].activat1 && productes[1].activat2">
+      <div id="producto2" *ngIf="productes[1].activat1">
         <div class="imgproducto">
           <img id="img2" src="../../assets/iPhone%2013.png">
         </div>
@@ -71,7 +72,7 @@
           <button class="ca" id="p2" (click)="toggle($event)"></button>
         </div>
       </div>
-      <div id="producto3" *ngIf="productes[2].activat1 && productes[2].activat2">
+      <div id="producto3" *ngIf="productes[2].activat1">
         <div class="imgproducto">
           <img id="img3" src="../../assets/realme.png">
         </div>
@@ -82,7 +83,7 @@
           <button class="ca" id="p3" (click)="toggle($event)"></button>
         </div>
       </div>
-      <div id="producto4" *ngIf="productes[3].activat1 && productes[3].activat2">
+      <div id="producto4" *ngIf="productes[3].activat1">
         <div class="imgproducto">
           <img id="img4" src="../../assets/oppo.png">
         </div>
@@ -93,7 +94,7 @@
           <button class="ca" id="p4" (click)="toggle($event)"></button>
         </div>
       </div>
-      <div id="producto5" *ngIf="productes[4].activat1 && productes[4].activat2">
+      <div id="producto5" *ngIf="productes[4].activat1">
         <div class="imgproducto" >
           <img id="img5" src="../../assets/Xiaomi.png">
         </div>
@@ -104,7 +105,7 @@
           <button class="ca" id="p5" (click)="toggle($event)"></button>
         </div>
       </div>
-      <div id="producto6" *ngIf="productes[5].activat1 && productes[5].activat2">
+      <div id="producto6" *ngIf="productes[5].activat1">
         <div class="imgproducto">
           <img id="img6" src="../../assets/s22%20ultra.png">
         </div>
