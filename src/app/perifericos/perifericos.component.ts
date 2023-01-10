@@ -60,6 +60,129 @@ export class PerifericosComponent implements OnInit{
   ngOnInit() {
   }
 
+  prova() {
+    var element1 = <HTMLInputElement>document.getElementById("a1");
+    var element2 = <HTMLInputElement>document.getElementById("a2");
+    var element3 = <HTMLInputElement>document.getElementById("a3");
+    var element4 = <HTMLInputElement>document.getElementById("a4");
+    var element5 = <HTMLInputElement>document.getElementById("a5");
+    var a1
+    var a2
+    var a3
+    var a4
+    var a5
+
+    if (element1.checked) {
+      a1 = true
+    } else {
+      a1 = false
+    }
+    if (element2.checked) {
+      a2 = true
+    } else {
+      a2 = false
+    }
+    if (element3.checked) {
+      a3 = true
+    } else {
+      a3 = false
+    }
+    if (element4.checked) {
+      a4 = true
+    } else {
+      a4 = false
+    }
+    if (element5.checked) {
+      a5 = true
+    } else {
+      a5 = false
+    }
+
+    this.productes[0].activat1 = false;
+    this.productes[2].activat1 = false;
+    this.productes[3].activat1 = false;
+    this.productes[1].activat1 = false;
+    this.productes[4].activat1 = false;
+
+    if (a3 == true) {
+      this.productes[0].activat1 = true;
+    }
+    if (a4 == true) {
+      this.productes[2].activat1 = true;
+      this.productes[1].activat1 = true;
+    }
+    if (a5 == true) {
+      this.productes[3].activat1 = true;
+      this.productes[4].activat1 = true;
+    }
+
+    if (a1 == true) {
+      if (a3 == true || a4 == true || a5 == true) {
+        if (this.productes[0].activat1 == true) {
+          this.productes[0].activat1 = true;
+        } else {
+          this.productes[0].activat1 = false;
+        }
+        if (this.productes[2].activat1 == true) {
+          this.productes[2].activat1 = true;
+        } else {
+          this.productes[2].activat1 = false;
+        }
+        if (this.productes[3].activat1 == true) {
+          this.productes[3].activat1 = true;
+        } else {
+          this.productes[3].activat1 = false;
+        }
+        this.productes[1].activat1 = false;
+        this.productes[4].activat1 = false;
+      } else {
+        this.productes[0].activat1 = true;
+        this.productes[2].activat1 = true;
+        this.productes[3].activat1 = true;
+        this.productes[1].activat1 = false;
+        this.productes[4].activat1 = false;
+      }
+    }
+    if (a2 == true) {
+      if (a3 == true || a4 == true || a5 == true) {
+
+        if (this.productes[1].activat1 == true) {
+          this.productes[1].activat1 = true;
+        } else {
+          this.productes[1].activat1 = false;
+        }
+        if (this.productes[4].activat1 == true) {
+          this.productes[4].activat1 = true;
+        } else {
+          this.productes[4].activat1 = false;
+        }
+        this.productes[0].activat1 = false;
+        this.productes[2].activat1 = false;
+        this.productes[3].activat1 = false;
+      } else {
+        this.productes[0].activat1 = false;
+        this.productes[1].activat1 = true;
+        this.productes[2].activat1 = false;
+        this.productes[3].activat1 = false;
+        this.productes[4].activat1 = true;
+      }
+    }
+    if (a1 == false && a2 == false && a3 == false && a4 == false && a5 == false) {
+      this.productes[0].activat1 = true;
+      this.productes[1].activat1 = true;
+      this.productes[2].activat1 = true;
+      this.productes[3].activat1 = true;
+      this.productes[4].activat1 = true;
+    }
+    if (a1 == true && a2 == true && a3 == true && a4 == true && a5 == true) {
+      this.productes[0].activat1 = true;
+      this.productes[1].activat1 = true;
+      this.productes[2].activat1 = true;
+      this.productes[3].activat1 = true;
+      this.productes[4].activat1 = true;
+    }
+  }
+
   toggle(event: Event): void {
     let elementId: string = (event.target as Element).id;
     var suma: any;
@@ -97,53 +220,4 @@ export class PerifericosComponent implements OnInit{
     preu()
   }
 
-  envioGratis(): void {
-    for (let i = 0; i < 10; i++) {
-      if (this.productes[i].envio == "Envio Gratis") {
-        this.productes[i].activat1 = true;
-      } else {
-        this.productes[i].activat1 = false;
-      }
-    }
-  }
-
-  recibeloManana(): void {
-    for (let i = 0; i < 10; i++) {
-      if (this.productes[i].envio == "Recíbelo mañana") {
-        this.productes[i].activat1 = true;
-      } else {
-        this.productes[i].activat1 = false;
-      }
-    }
-  }
-
-  monitors() : void {
-    for (let i = 0; i < 10; i++) {
-      if (this.productes[i].tipus == "Monitor") {
-        this.productes[i].activat2 = true;
-      } else {
-        this.productes[i].activat2 = false;
-      }
-    }
-  }
-
-  teclados() : void {
-    for (let i = 0; i < 10; i++) {
-      if (this.productes[i].tipus == "Teclat") {
-        this.productes[i].activat2 = true;
-      } else {
-        this.productes[i].activat2 = false;
-      }
-    }
-  }
-
-  ratones() : void {
-    for (let i = 0; i < 10; i++) {
-      if (this.productes[i].tipus == "Ratoli") {
-        this.productes[i].activat2 = true;
-      } else {
-        this.productes[i].activat2 = false;
-      }
-    }
-  }
 }
