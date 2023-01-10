@@ -8,8 +8,33 @@ import {Component, OnInit} from '@angular/core';
 export class OrdenadoresComponent implements OnInit {
 
   productes: any[];
+  bottons: any[];
 
   constructor() {
+    const gratis = {
+      activat3: false
+    }
+
+    const manana = {
+      activat3: false
+    }
+
+    const appleBotton = {
+      activat3: false
+    }
+
+    const hpBotton = {
+      activat3: false
+    }
+
+    const msiBotton = {
+      activat3: false
+    }
+
+    const asusBotton = {
+      activat3: false
+    }
+
     const producte1 = {
       titol: "MSI Modern 14 Core-i7/16GB/512GB SSD",
       envio: "Envio Gratis",
@@ -57,67 +82,105 @@ export class OrdenadoresComponent implements OnInit {
     this.productes.push(producte3);
     this.productes.push(producte4);
     this.productes.push(producte5);
+
+    this.bottons = [];
+    this.bottons.push(gratis);
+    this.bottons.push(manana);
+    this.bottons.push(appleBotton);
+    this.bottons.push(hpBotton);
+    this.bottons.push(msiBotton);
+    this.bottons.push(asusBotton);
+
+
   }
 
   ngOnInit() {
   }
 
+  setBotton(): void {
+    this.bottons
+  }
+
+  gratisBotton(): void {
+    this.bottons[0].activat3 = !this.bottons[0].activat3;
+  }
+
+  mananaBotton(): void {
+    this.bottons[1].activat3 = !this.bottons[1].activat3;
+  }
+
+  appleBotton(): void {
+    this.bottons[2].activat3 = !this.bottons[2].activat3;
+  }
+
+  hpBotton(): void {
+    this.bottons[3].activat3 = !this.bottons[3].activat3;
+  }
+
+  msiBotton(): void {
+    this.bottons[4].activat3 = !this.bottons[4].activat3;
+  }
+
+  asusBotton(): void {
+    this.bottons[5].activat3 = !this.bottons[5].activat3;
+  }
+
   envioGratis(): void {
     for (let i = 0; i < 10; i++) {
-      if (this.productes[i].envio == "Envio Gratis") {
-        this.productes[i].activat1 = true;
-      } else {
+      if (this.bottons[i].activat3==false){
         this.productes[i].activat1 = false;
+      } else {
+        this.productes[i].activat1 = true;
       }
     }
   }
 
   recibeloManana(): void {
     for (let i = 0; i < 10; i++) {
-      if (this.productes[i].envio == "Recíbelo mañana") {
-        this.productes[i].activat1 = true;
-      } else {
+      if (this.bottons[i].activat3==false){
         this.productes[i].activat1 = false;
+      } else {
+        this.productes[i].activat1 = true;
       }
     }
   }
 
   apple(): void {
     for (let i = 0; i < 10; i++) {
-      if (this.productes[i].marca == "Apple") {
-        this.productes[i].activat2 = true;
+      if (this.bottons[i].activat3==false){
+        this.productes[i].activat1 = false;
       } else {
-        this.productes[i].activat2 = false;
+        this.productes[i].activat1 = true;
       }
     }
   }
 
   hp(): void {
     for (let i = 0; i < 10; i++) {
-      if (this.productes[i].marca == "HP") {
-        this.productes[i].activat2 = true;
+      if (this.bottons[i].activat3==false){
+        this.productes[i].activat1 = false;
       } else {
-        this.productes[i].activat2 = false;
+        this.productes[i].activat1 = true;
       }
     }
   }
 
   msi(): void {
     for (let i = 0; i < 10; i++) {
-      if (this.productes[i].marca == "MSI") {
-        this.productes[i].activat2 = true;
+      if (this.bottons[i].activat3==false){
+        this.productes[i].activat1 = false;
       } else {
-        this.productes[i].activat2 = false;
+        this.productes[i].activat1 = true;
       }
     }
   }
 
   asus(): void {
     for (let i = 0; i < 10; i++) {
-      if (this.productes[i].marca == "Asus") {
-        this.productes[i].activat2 = true;
+      if (this.bottons[i].activat3==false){
+        this.productes[i].activat1 = false;
       } else {
-        this.productes[i].activat2 = false;
+        this.productes[i].activat1 = true;
       }
     }
   }

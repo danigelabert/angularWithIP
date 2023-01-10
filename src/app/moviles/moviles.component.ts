@@ -72,6 +72,7 @@ export class MovilesComponent implements OnInit{
    }
 
   ngOnInit(){
+
     const btn = document.querySelector('.a1')!;
     const radioButtons = document.querySelectorAll('input[name="envio"]');
     btn.addEventListener("click", () => {

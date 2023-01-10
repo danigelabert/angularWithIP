@@ -15,15 +15,35 @@
 <div class="texto">
   <aside>
     <h3>Envio</h3>
-    <label><input class="a1" type="radio" name="envio" value="envio_gratis"> Envio gratis</label><br>
-    <label><input class="a1" type="radio" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
+    <label><input onclick="validaCheckbox()" id="a1" type="checkbox" name="envio" value="envio_gratis"> Envio gratis</label><br>
+    <label><input onclick="validaCheckbox()" id="a2" type="checkbox" name="envio" value="envio_1dia"> Recíbelo mañana</label><br>
     <h3>Marca</h3>
-    <label><input (click)="apple()" type="radio" name="marca" value="apple"> Apple</label><br>
-    <label><input (click)="xiaomi()" type="radio" name="marca" value="xiaomi"> Xiaomi</label><br>
-    <label><input (click)="samsung()" type="radio" name="marca" value="samsung"> Samsung</label><br>
-    <label><input (click)="realMe()" type="radio" name="marca" value="realme"> Real me</label><br>
-    <label><input (click)="oppo()" type="radio" name="marca" value="oppo"> Oppo</label><br>
+    <label><input onclick="validaCheckbox()" id="a3" type="checkbox" name="marca" value="apple"> Apple</label><br>
+    <label><input onclick="validaCheckbox()" id="a4" type="checkbox" name="marca" value="xiaomi"> Xiaomi</label><br>
+    <label><input onclick="validaCheckbox()" id="a5" type="checkbox" name="marca" value="samsung"> Samsung</label><br>
+    <label><input onclick="validaCheckbox()" id="a6" type="checkbox" name="marca" value="realme"> Real me</label><br>
+    <label><input onclick="validaCheckbox()" id="a7" type="checkbox" name="marca" value="oppo"> Oppo</label><br>
   </aside>
+
+  <script>
+    // var checkbox = document.getElementById('a1');
+    // var checkbox = document.getElementById('a1'||'a2'||'a3'||'a4'||'a5'||'a6'||'a7');
+    // checkbox.addEventListener("change", validaCheckbox, false);
+    // function validaCheckbox()
+    // {
+    //   var checked = checkbox.checked;
+    //   if(checked){
+    //     alert('checkbox1 esta seleccionado');
+    //   }
+    // }
+
+    if ($('#a1').is(':checked') ) {
+      alert("Checkbox seleccionado");
+    }
+
+  </script>
+
+
   <article>
     <div id="resultat">
       <h2>RESULTADOS</h2>
