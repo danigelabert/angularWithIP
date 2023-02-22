@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {ServeiService} from "../servei.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-formulario2',
@@ -11,7 +12,7 @@ export class Formulario2Component implements OnInit{
   usuari: any;
   password:any;
 
-  constructor(private router: Router, private s: ServeiService) {
+  constructor(private router: Router, private http:HttpClient, private s: ServeiService) {
   }
 
   ngOnInit() {
