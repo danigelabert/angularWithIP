@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="Es" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Aram Mateos & Dani Gelabert">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="cambiar-contrasenya.component.css">
+  <title>Formulario</title>
+  <link rel="shortcut icon" href="../../assets/minilogo.jpg">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+<header>
+  <div class="derecha">
+    <a routerLink="/pagina-web"><img src="../../assets/logo.png" class="logo" alt="minilogo"></a>
+  </div>
+</header>
+<div class="texto">
+  <article>
+    <div class="centrar">
+      <div class="formulario">
+        <h1>Cambio de contraseña</h1>
+        <p>Introduce tu cuenta de correo electronico y su nueva contraseña.</p>
+        <form class="form">
+          <p type="Correo"><input placeholder="Email" [(ngModel)]="correu" [ngModelOptions]="{standalone:true}"></p>
+          <p type="Contraseña:"><input type="password" placeholder="Contraseña" [(ngModel)]="password" [ngModelOptions]="{standalone:true}"></p>
+          <p type="Contraseña:"><input type="password" placeholder="Contraseña" [(ngModel)]="password2" [ngModelOptions]="{standalone:true}"></p>
+          <button (click)="enviar()">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </article>
+</div>
+</body>
+</html>

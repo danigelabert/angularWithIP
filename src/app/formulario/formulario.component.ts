@@ -28,4 +28,8 @@ export class FormularioComponent implements OnInit{
       localStorage.setItem("nombre",usr!)
     }
   }
+
+  restaurar(){
+
+  }
 }

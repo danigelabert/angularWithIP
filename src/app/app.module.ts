@@ -16,6 +16,9 @@ import { routing } from './app.routing';
 import {MenuComponent} from "./menu/menu.component";
 import { BuscadorComponent } from './buscador/buscador.component';
 import { PeupaginaComponent } from './peupagina/peupagina.component';
+import { RestaurarComponent } from './restaurar/restaurar.component';
+import {HttpClientModule} from "@angular/common/http";
+import { CambiarContrasenyaComponent } from './cambiar-contrasenya/cambiar-contrasenya.component';
 
 
 @NgModule({
@@ -33,11 +36,14 @@ import { PeupaginaComponent } from './peupagina/peupagina.component';
     MenuComponent,
     BuscadorComponent,
     PeupaginaComponent,
+    RestaurarComponent,
+    CambiarContrasenyaComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
