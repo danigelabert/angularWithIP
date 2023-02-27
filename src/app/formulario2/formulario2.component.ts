@@ -27,7 +27,7 @@ export class Formulario2Component implements OnInit{
 
   formularioEnviado(): void{
     this.http.post<any>("http://localhost:4080/registre", {user: this.usuari,
-      contrasenya: this.password,
+      password: this.password,
       email: this.email}).subscribe();
     console.log(this.usuari,
        this.password,
