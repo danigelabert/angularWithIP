@@ -17,7 +17,7 @@ export class FormularioComponent implements OnInit{
   }
   ngOnInit() {
   }
-  formularioEnviado(){
+  formularioEnviado($myParam: string=''){
     var resultat: Object =false;
     let req = new HttpParams().set('email',this.correu);
     let req2 = new HttpParams().set('name',this.nombre);
@@ -30,6 +30,14 @@ export class FormularioComponent implements OnInit{
           console.log(resultat);
           if (resultat == true) {
             alert("TOT CORRECTE")
+            const nav: string[] = ['/pagina-web']
+            if($myParam.length) {
+              nav.push($myParam);
+            }
+            this.router.navigate(nav)
+            localStorage.setItem("nombre",this.correu)
+
+
           }else
             alert("Contrasenya incorrecte.")
         })
