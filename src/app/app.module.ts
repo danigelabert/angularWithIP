@@ -16,12 +16,11 @@ import { routing } from './app.routing';
 import {MenuComponent} from "./menu/menu.component";
 import { BuscadorComponent } from './buscador/buscador.component';
 import { PeupaginaComponent } from './peupagina/peupagina.component';
-import {RestaurarComponent} from "./restaurar/restaurar.component";
-import {CambiarContrasenyaComponent} from "./cambiar-contrasenya/cambiar-contrasenya.component";
+import { RestaurarComponent } from './restaurar/restaurar.component';
 import {HttpClientModule} from "@angular/common/http";
+import { CambiarContrasenyaComponent } from './cambiar-contrasenya/cambiar-contrasenya.component';
 
 
-// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,5 +48,4 @@ import {HttpClientModule} from "@angular/common/http";
   providers: [],
   bootstrap: [AppComponent]
 })
-// @ts-ignore
 export class AppModule { }
