@@ -19,6 +19,7 @@ import { PeupaginaComponent } from './peupagina/peupagina.component';
 import { RestaurarComponent } from './restaurar/restaurar.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CambiarContrasenyaComponent } from './cambiar-contrasenya/cambiar-contrasenya.component';
+import { DatosComponent } from './datos/datos.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { CambiarContrasenyaComponent } from './cambiar-contrasenya/cambiar-contr
     PeupaginaComponent,
     RestaurarComponent,
     CambiarContrasenyaComponent,
+    DatosComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,4 +50,5 @@ import { CambiarContrasenyaComponent } from './cambiar-contrasenya/cambiar-contr
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

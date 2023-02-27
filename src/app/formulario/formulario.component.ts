@@ -19,6 +19,7 @@ export class FormularioComponent implements OnInit{
   }
   formularioEnviado($myParam: string=''){
     var resultat: Object =false;
+    var username:any;
     let req = new HttpParams().set('email',this.correu);
     let req2 = new HttpParams().set('name',this.nombre);
     this.http.get("http://localhost:4080/inicisessio", {params: req}).subscribe((client)=>{
@@ -29,15 +30,18 @@ export class FormularioComponent implements OnInit{
           resultat = client;
           console.log(resultat);
           if (resultat == true) {
-            alert("TOT CORRECTE")
-            const nav: string[] = ['/pagina-web']
-            if($myParam.length) {
-              nav.push($myParam);
-            }
-            this.router.navigate(nav)
-            localStorage.setItem("nombre",this.correu)
-
-
+            this.http.get("http://localhost:4080/api/nombre", {params: req}).subscribe((nom)=>{
+              //@ts-ignore
+              username=nom.Usuari;
+              localStorage.setItem("nombre",username)
+              localStorage.setItem("correo",this.correu)
+              alert("Inicio de sesion correcto")
+              const nav: string[] = ['/pagina-web']
+              if($myParam.length) {
+                nav.push($myParam);
+              }
+              this.router.navigate(nav)
+            })
           }else
             alert("Contrasenya incorrecte.")
         })

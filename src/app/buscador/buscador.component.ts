@@ -14,13 +14,15 @@ export class BuscadorComponent {
   }
 
   ngOnInit() {
-    const nombre=this.s.getUser()
+    const nombre= localStorage.getItem('nombre')
     const c=undefined
     if (nombre==c){
       console.log("no esta")
     } else {
       let boton=document.getElementById("redondo")!;
       boton.style.visibility="hidden"
+      let user=document.getElementById("redondo2")!;
+      user.style.visibility="visible"
       let lin=document.getElementById("link")!;
       lin.style.marginTop="18%"
       this.resultat=nombre
@@ -45,5 +47,10 @@ export class BuscadorComponent {
     boton.style.visibility="visible"
     let lin=document.getElementById("link")!;
     lin.style.marginTop="0"
+    let user=document.getElementById("redondo2")!;
+    user.style.visibility="hidden"
+    user.style.marginLeft= "80%";
+    let link=document.getElementById("link2")!;
+    link.style.pointerEvents= "none";
   }
 }

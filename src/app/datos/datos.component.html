@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="Es" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Aram Mateos & Dani Gelabert">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="datos.component.css">
+  <title>Formulario</title>
+  <link rel="shortcut icon" href="../../assets/minilogo.jpg">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+<header>
+  <div class="derecha">
+    <a routerLink="/pagina-web"><img src="../../assets/logo.png" class="logo" alt="minilogo"></a>
+  </div>
+</header>
+<div class="texto">
+  <article>
+    <div class="centrar">
+      <div class="formulario">
+        <h1>Datos de Usuario</h1>
+        <br>
+        <p>Nombre de Usuario: &nbsp;&nbsp;{{this.username}}</p>
+        <br>
+        <p>Correo electronico: &nbsp;&nbsp;&nbsp;&nbsp;{{this.correo}}</p>
+        <br>
+        <p>Contraseña: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.contrasena}}</p>
+      </div>
+    </div>
+  </article>
+</div>
+</body>
+</html>
