@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from "@angular/common/http";
+
 import { AppComponent } from './app.component';
 import {PaginaWebComponent} from './pagina-web/pagina-web.component';
 import {CarritoComponent} from "./carrito/carrito.component";
@@ -33,12 +33,14 @@ import { PeupaginaComponent } from './peupagina/peupagina.component';
     MenuComponent,
     BuscadorComponent,
     PeupaginaComponent,
+    RestaurarComponent,
+    CambiarContrasenyaComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

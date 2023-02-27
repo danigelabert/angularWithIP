@@ -21,15 +21,13 @@ export class FormularioComponent implements OnInit{
   }
   formularioEnviado(){
 
-    // var pasw=this.s.getPassword()
-
-    // if (this.usuari== && pasw==this.password){
-    //   const nav: string[] = ['/pagina-web']
-    //   if($myParam.length) {
-    //     nav.push($myParam);
-    //   }
-    //   this.router.navigate(nav)
-    //   localStorage.setItem("nombre",usr!)
+    if (usr==this.usuari && pasw==this.password){
+      const nav: string[] = ['/pagina-web']
+      if($myParam.length) {
+        nav.push($myParam);
+      }
+      this.router.navigate(nav)
+      localStorage.setItem("nombre",usr!)
     }
   }
-
+}

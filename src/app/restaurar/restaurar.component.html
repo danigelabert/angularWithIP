@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="Es" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Aram Mateos & Dani Gelabert">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="restaurar.component.css">
+  <title>RESTAURAR</title>
+  <link rel="shortcut icon" href="../../assets/minilogo.jpg">
+</head>
+<body>
+<header>
+  <div class="derecha">
+    <a routerLink="/pagina-web"><img src="../../assets/logo.png" class="logo" alt="minilogo"></a>
+  </div>
+</header>
+<div class="texto">
+  <article>
+    <div class="centrar">
+      <div class="formulario">
+        <h1>Recuperar contraseña</h1>
+        <p>Introduce el e-mail asociado a tu cuenta y te enviaremos una nueva contraseña para restablecer tu antigua contraseña</p>
+        <form class="form">
+          <p type="Nombre"><input placeholder="Name" [(ngModel)]="nombre" [ngModelOptions]="{standalone:true}"></p>
+          <p type="Correo"><input placeholder="Email" [(ngModel)]="correu" [ngModelOptions]="{standalone:true}"></p>
+          <button (click)="enviar()">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </article>
+</div>
+</body>
+</html>
