@@ -18,13 +18,13 @@
   <article>
     <div class="centrar">
       <div class="signin">
-        <form class="form">
+        <form class="form"  >
           <h2>Registrate</h2>
           <p class="cuenta">Ya tienes cuenta?</p>
           <p type="Usuario:"><input placeholder="Usuario" [(ngModel)]="usuari" [ngModelOptions]="{standalone:true}"></p>
-          <p type="Email:"><input placeholder="Email"></p>
+          <p type="Email:"><input placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{standalone:true}"></p>
           <p type="Contraseña:"><input type="password" placeholder="Contraseña" [(ngModel)]="password" [ngModelOptions]="{standalone:true}"></p>
-          <button (click)="valorLogIn()">Registrarse</button>
+          <button type="submit"> <a (click)="formularioEnviado()" routerLink="/formulario" id="registre">Registrarse</a></button>
           <div class="compañia">
             <span class="fa fa-phone"></span>633 47 13 95
             <span class="fa fa-envelope-o"></span> amazon@gmail.com

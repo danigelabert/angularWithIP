@@ -213,6 +213,11 @@ article{
   transition:all .3s
 }
 
+#registre{
+  text-decoration: none;
+  color: black;
+}
+
 .signin button:hover{
   background:#78788c;
   color:#fff

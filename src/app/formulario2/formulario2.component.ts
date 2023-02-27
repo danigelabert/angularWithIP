@@ -9,22 +9,29 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./formulario2.component.css']
 })
 export class Formulario2Component implements OnInit{
-  usuari: any;
-  password:any;
+  usuari: string = '';
+  email: string = '';
+  password: string = '';
 
-  constructor(private router: Router, private http:HttpClient, private s: ServeiService) {
+  constructor(private router: Router, private http:HttpClient) {
+    // this.correu= {
+    //   Usuari: this.usuari,
+    //   contrasenya: this.email,
+    //   email: this.email
+    // }
   }
 
   ngOnInit() {
 
   }
 
-  valorLogIn($myParam: string = ''): void{
-    const nav: string[] = ['/formulario']
-    if($myParam.length) {
-      nav.push($myParam);
-    }
-    this.router.navigate(nav)
-    this.s.setNom(this.usuari, this.password)
+  formularioEnviado(): void{
+    this.http.post<any>("http://localhost:4080/registre", {user: this.usuari,
+      contrasenya: this.password,
+      email: this.email}).subscribe();
+    console.log(this.usuari,
+       this.password,
+       this.email)
+
   }
 }
