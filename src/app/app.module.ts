@@ -48,4 +48,5 @@ import { CambiarContrasenyaComponent } from './cambiar-contrasenya/cambiar-contr
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
