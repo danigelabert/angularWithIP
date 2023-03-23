@@ -8,9 +8,17 @@ import {ServeiService} from "../servei.service";
 })
 export class PaginaWebComponent implements OnInit{
   resultat: any;
+  imatges: any[];
 
   constructor(private s: ServeiService) {
-
+    const slider = {
+      foto1: "http://localhost:4080/images/slider/foto1",
+      foto2: "http://localhost:4080/images/slider/foto2",
+      foto3: "http://localhost:4080/images/slider/foto3",
+      foto4: "http://localhost:4080/images/slider/foto4"
+    };
+    this.imatges = [];
+    this.imatges.push(slider);
   }
 
   ngOnInit() {

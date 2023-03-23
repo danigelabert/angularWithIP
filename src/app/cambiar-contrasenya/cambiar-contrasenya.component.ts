@@ -11,7 +11,13 @@ export class CambiarContrasenyaComponent {
   correu:any;
   password:any;
   password2:any;
+  productes: any[];
   constructor(private router: Router,private http: HttpClient) {
+    const images = {
+      imatge1: "http://localhost:4080/images/buscador/logo"
+    };
+    this.productes = [];
+    this.productes.push(images);
   }
 
   enviar($myParam: string = ''){

@@ -14,7 +14,8 @@ export class PerifericosComponent implements OnInit{
       preu: "499€",
       tipus: "Monitor",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/periferics/newskill"
     };
     const producte2 = {
       titol: "Logitech K120",
@@ -22,7 +23,8 @@ export class PerifericosComponent implements OnInit{
       preu: "11€",
       tipus: "Teclat",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/periferics/logitech"
     };
     const producte3 = {
       titol: "Forgeon Clutch",
@@ -30,7 +32,8 @@ export class PerifericosComponent implements OnInit{
       preu: "499€",
       tipus: "Teclat",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/periferics/forgeon"
     };
     const producte4 = {
       titol: "Razer Basilisk",
@@ -38,7 +41,8 @@ export class PerifericosComponent implements OnInit{
       preu: "40€",
       tipus: "Ratoli",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/periferics/razer"
     };
     const producte5 = {
       titol: "Asus P307",
@@ -46,7 +50,8 @@ export class PerifericosComponent implements OnInit{
       preu: "45€",
       tipus: "Ratoli",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/periferics/asus"
     };
 
     this.productes = [];

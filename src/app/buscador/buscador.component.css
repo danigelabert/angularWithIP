@@ -56,7 +56,7 @@ header{
   width: 40px;
   height: 36px;
   border: 3px solid #3e77ff;
-  background-image: url("../../assets/lupa.png");
+  background-image: url("http://localhost:4080/images/css/lupa");
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,7 +72,7 @@ header{
 }
 
 .carrito{
-  background-image: url("../../assets/carrito.png");
+  background-image: url("http://localhost:4080/images/css/carrito");
   background-position: center;
   background-size: 30px;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@ header{
 }
 
 #redondo{
-  background-image: url("../../assets/login.png");
+  background-image: url("http://localhost:4080/images/css/login");
   background-position: center;
   background-position-y: 4px;
   background-size: cover;
@@ -126,7 +126,7 @@ header{
   border-radius: 15px;
   margin-top: 11.5%;
   margin-left: 3px;
-  background-image: url("../../assets/exit.png");
+  background-image: url("http://localhost:4080/images/css/exit");
   background-size: cover;
   border: none;
   background-color: transparent;

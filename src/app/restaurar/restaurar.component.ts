@@ -9,8 +9,14 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 export class RestaurarComponent {
   correu: any;
   nombre:any;
+  productes: any[];
 
   constructor(private http: HttpClient) {
+    const images = {
+      imatge1: "http://localhost:4080/images/buscador/logo"
+    };
+    this.productes = [];
+    this.productes.push(images);
   }
 
   enviar(){

@@ -181,7 +181,7 @@ article{
   flex-grow: 8;
   width: 100%;
   height: 50px;
-  background-image: url("../../assets/colage1.png");
+  background-image: url("http://localhost:4080/images/css/collage1");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -209,7 +209,7 @@ article{
   flex-grow: 8;
   width: 100%;
   height: 50px;
-  background-image: url("../../assets/colage2.png");
+  background-image: url("http://localhost:4080/images/css/collage2");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -237,7 +237,7 @@ article{
   flex-grow: 8;
   width: 100%;
   height: 50px;
-  background-image: url("../../assets/colage3.png");
+  background-image: url("http://localhost:4080/images/css/collage3");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -273,7 +273,7 @@ article{
   flex-grow: 8;
   width: 100%;
   height: 50px;
-  background-image: url("../../assets/amazon-prime-video.jpg");
+  background-image: url("http://localhost:4080/images/css/primevideo");
   background-size: cover;
   background-position-y: -100px;
   background-repeat: no-repeat;
@@ -302,7 +302,7 @@ article{
   flex-grow: 8;
   width: 100%;
   height: 50px;
-  background-image: url("../../assets/sorpresa.jpg");
+  background-image: url("http://localhost:4080/images/css/sorpresa");
   background-size: cover;
   background-repeat: no-repeat;
 }

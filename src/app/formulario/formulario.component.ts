@@ -11,9 +11,14 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 export class FormularioComponent implements OnInit{
   correu: any;
   nombre:any;
+  productes: any[];
 
   constructor(private router: Router, private http: HttpClient) {
-
+    const images = {
+      imatge1: "http://localhost:4080/images/buscador/logo"
+    };
+    this.productes = [];
+    this.productes.push(images);
   }
   ngOnInit() {
   }
