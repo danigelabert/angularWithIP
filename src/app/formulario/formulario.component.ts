@@ -27,15 +27,15 @@ export class FormularioComponent implements OnInit{
     var username:any;
     let req = new HttpParams().set('email',this.correu);
     let req2 = new HttpParams().set('name',this.nombre);
-    this.http.get("http://localhost:4080/inicisessio", {params: req}).subscribe((client)=>{
+    this.http.get("http://172.16.9.1:4080/inicisessio", {params: req}).subscribe((client)=>{
       resultat=client;
       console.log(resultat);
       if(resultat==true){
-        this.http.get("http://localhost:4080/contrasenya", {params: req2}).subscribe((client)=> {
+        this.http.get("http://172.16.9.1:4080/contrasenya", {params: req2}).subscribe((client)=> {
           resultat = client;
           console.log(resultat);
           if (resultat == true) {
-            this.http.get("http://localhost:4080/api/nombre", {params: req}).subscribe((nom)=>{
+            this.http.get("http://172.16.9.1:4080/api/nombre", {params: req}).subscribe((nom)=>{
               //@ts-ignore
               username=nom.Usuari;
               localStorage.setItem("nombre",username)
