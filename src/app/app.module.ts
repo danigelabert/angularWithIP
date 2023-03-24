@@ -20,6 +20,7 @@ import { RestaurarComponent } from './restaurar/restaurar.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CambiarContrasenyaComponent } from './cambiar-contrasenya/cambiar-contrasenya.component';
 import { DatosComponent } from './datos/datos.component';
+import { FormulariconsultesComponent } from './formulariconsultes/formulariconsultes.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { DatosComponent } from './datos/datos.component';
     RestaurarComponent,
     CambiarContrasenyaComponent,
     DatosComponent,
+    FormulariconsultesComponent,
   ],
   imports: [
     BrowserModule,
