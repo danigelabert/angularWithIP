@@ -24,6 +24,7 @@
           <p type="Usuario:"><input placeholder="Usuario" [(ngModel)]="usuari" [ngModelOptions]="{standalone:true}"></p>
           <p type="Email:"><input placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{standalone:true}"></p>
           <p type="Contraseña:"><input type="password" placeholder="Contraseña" [(ngModel)]="password" [ngModelOptions]="{standalone:true}"></p>
+          <re-captcha (resolved)="resolved($event)" [size]="'normal'" [theme]="'light'"></re-captcha>
           <button type="submit"> <a (click)="formularioEnviado()" routerLink="/formulario" id="registre">Registrarse</a></button>
           <div class="compañia">
             <span class="fa fa-phone"></span>633 47 13 95

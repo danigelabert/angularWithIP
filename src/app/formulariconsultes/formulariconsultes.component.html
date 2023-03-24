@@ -22,6 +22,7 @@
           <p type="Nombre usuario:"><input class="formulari" placeholder="Nombre usuario" [(ngModel)]="usuari" [ngModelOptions]="{standalone:true}"></p>
           <p type="Correo:"><input class="formulari" placeholder="Correo" [(ngModel)]="correu" [ngModelOptions]="{standalone:true}"></p>
           <p type="Mensaje:"><textarea id="missatge" placeholder="Escribe tu consulta" [(ngModel)]="missatge" [ngModelOptions]="{standalone:true}"></textarea></p>
+          <re-captcha (resolved)="resolved($event)"  [size]="'normal'" [theme]="'light'"></re-captcha>
           <button (click)="formularioEnviado()">Enviar</button>
         </form>
       </div>

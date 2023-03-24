@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RecaptchaModule, RECAPTCHA_SETTINGS} from "ng-recaptcha";
+import { RecaptchaSettings} from "ng-recaptcha";
 import { AppComponent } from './app.component';
 import {PaginaWebComponent} from './pagina-web/pagina-web.component';
 import {CarritoComponent} from "./carrito/carrito.component";
@@ -47,9 +48,10 @@ import { FormulariconsultesComponent } from './formulariconsultes/formulariconsu
     BrowserModule,
     FormsModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule
   ],
-  providers: [],
+  providers: [{provide:RECAPTCHA_SETTINGS, useValue: {siteKey: '6LfQZColAAAAAKyc-ZNkJOoarmat2dalQMqerjJQ'} as RecaptchaSettings}],
   bootstrap: [AppComponent]
 })
 
