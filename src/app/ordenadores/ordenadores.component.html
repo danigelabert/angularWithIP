@@ -47,7 +47,7 @@
     <div>
       <div id="producto7" *ngIf="productes[0].activat1">
         <div class="imgproducto">
-          <img src="../../assets/MSI%20Modern.png">
+          <img [src]="productes[0].imatge">
         </div>
         <div class="titolproducto">
           <h2>{{productes[0].titol}}</h2><br>
@@ -58,7 +58,7 @@
       </div>
       <div id="producto8" *ngIf="productes[1].activat1">
         <div class="imgproducto">
-          <img src="../../assets/HP%20Omen.png">
+          <img [src]="productes[1].imatge">
         </div>
         <div class="titolproducto">
           <h2>{{productes[1].titol}}</h2><br>
@@ -69,7 +69,7 @@
       </div>
       <div id="producto9" *ngIf="productes[2].activat1">
         <div class="imgproducto">
-          <img src="../../assets/Asus%20TUF.png">
+          <img [src]="productes[2].imatge">
         </div>
         <div class="titolproducto">
           <h2>{{productes[2].titol}}</h2><br>
@@ -80,7 +80,7 @@
       </div>
       <div id="producto10" *ngIf="productes[3].activat1">
         <div class="imgproducto">
-          <img src="../../assets/Asus%20F515.png">
+          <img [src]="productes[3].imatge">
         </div>
         <div class="titolproducto">
           <h2>{{productes[3].titol}}</h2><br>
@@ -91,7 +91,7 @@
       </div>
       <div id="producto11" *ngIf="productes[4].activat1">
         <div class="imgproducto">
-          <img src="../../assets/Apple%20MacBook.png">
+          <img [src]="productes[4].imatge">
         </div>
         <div class="titolproducto">
           <h2>{{productes[4].titol}}</h2><br>

@@ -33,7 +33,7 @@
     <div>
       <div id="producto1" *ngIf="productes[0].activat1">
         <div class="imgproducto">
-          <img id="img1" src="../../assets/iPhone%2014%20Pro%20Max.png">
+          <img [src]="productes[0].imatge">
         </div>
         <div class="titolproducto">
           <h2 id="nom1">{{productes[0].titol}}</h2><br>
@@ -44,7 +44,7 @@
       </div>
       <div id="producto2" *ngIf="productes[1].activat1">
         <div class="imgproducto">
-          <img id="img2" src="../../assets/iPhone%2013.png">
+          <img [src]="productes[1].imatge">
         </div>
         <div class="titolproducto">
           <h2 id="nom2" class="iphone">{{productes[1].titol}}</h2><br>
@@ -55,7 +55,7 @@
       </div>
       <div id="producto3" *ngIf="productes[2].activat1">
         <div class="imgproducto">
-          <img id="img3" src="../../assets/realme.png">
+          <img [src]="productes[2].imatge">
         </div>
         <div class="titolproducto">
           <h2 id="nom3">{{productes[2].titol}}</h2><br>
@@ -66,7 +66,7 @@
       </div>
       <div id="producto4" *ngIf="productes[3].activat1">
         <div class="imgproducto">
-          <img id="img4" src="../../assets/oppo.png">
+          <img [src]="productes[3].imatge">
         </div>
         <div class="titolproducto">
           <h2 id="nom4">{{productes[3].titol}}</h2><br>
@@ -77,7 +77,7 @@
       </div>
       <div id="producto5" *ngIf="productes[4].activat1">
         <div class="imgproducto" >
-          <img id="img5" src="../../assets/Xiaomi.png">
+          <img [src]="productes[4].imatge">
         </div>
         <div class="titolproducto">
           <h2 id="nom5">{{productes[4].titol}}</h2><br>
@@ -88,7 +88,7 @@
       </div>
       <div id="producto6" *ngIf="productes[5].activat1">
         <div class="imgproducto">
-          <img id="img6" src="../../assets/s22%20ultra.png">
+          <img [src]="productes[5].imatge">
         </div>
         <div class="titolproducto">
           <h2 id="nom6">{{productes[5].titol}}</h2><br>

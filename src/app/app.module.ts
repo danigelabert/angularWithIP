@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RecaptchaModule, RECAPTCHA_SETTINGS} from "ng-recaptcha";
+import { RecaptchaSettings} from "ng-recaptcha";
 import { AppComponent } from './app.component';
 import {PaginaWebComponent} from './pagina-web/pagina-web.component';
 import {CarritoComponent} from "./carrito/carrito.component";
@@ -20,6 +21,7 @@ import { RestaurarComponent } from './restaurar/restaurar.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CambiarContrasenyaComponent } from './cambiar-contrasenya/cambiar-contrasenya.component';
 import { DatosComponent } from './datos/datos.component';
+import { FormulariconsultesComponent } from './formulariconsultes/formulariconsultes.component';
 
 
 @NgModule({
@@ -40,14 +42,16 @@ import { DatosComponent } from './datos/datos.component';
     RestaurarComponent,
     CambiarContrasenyaComponent,
     DatosComponent,
+    FormulariconsultesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule
   ],
-  providers: [],
+  providers: [{provide:RECAPTCHA_SETTINGS, useValue: {siteKey: '6LfQZColAAAAAKyc-ZNkJOoarmat2dalQMqerjJQ'} as RecaptchaSettings}],
   bootstrap: [AppComponent]
 })
 

@@ -12,6 +12,7 @@ import {PerifericosComponent} from "./perifericos/perifericos.component";
 import {MenuComponent} from "./menu/menu.component";
 import {RestaurarComponent} from "./restaurar/restaurar.component";
 import {DatosComponent} from "./datos/datos.component";
+import {FormulariconsultesComponent} from "./formulariconsultes/formulariconsultes.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/pagina-web', pathMatch: 'full'},
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
   {path:'perifericos', component:  PerifericosComponent},
   {path:'menu', component:  MenuComponent},
   {path:'canvi', component:  CambiarContrasenyaComponent},
-  {path:'datos', component: DatosComponent}
+  {path:'datos', component: DatosComponent},
+  {path:'formulariconsultes', component: FormulariconsultesComponent}
 ]
 
 export const routing= RouterModule.forRoot(appRoutes)

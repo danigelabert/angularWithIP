@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-ordenadores',
@@ -11,13 +10,15 @@ export class OrdenadoresComponent implements OnInit {
   productes: any[];
 
   constructor(private http: HttpClient) {
+
     const producte1 = {
       titol: "MSI Modern 14 Core-i7/16GB/512GB SSD",
       envio: "Envio Gratis",
       preu: "799€",
       marca: "MSI",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/ordinador/msimodern"
     };
     const producte2 = {
       titol: "HP Omen 16 Core-i7/16GB/1TB SSD",
@@ -25,7 +26,8 @@ export class OrdenadoresComponent implements OnInit {
       preu: "1219€",
       marca: "HP",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/ordinador/hpomen"
     };
     const producte3 = {
       titol: "Asus TUF Gaming Core-i5/16GB/512GB",
@@ -33,7 +35,8 @@ export class OrdenadoresComponent implements OnInit {
       preu: "999€",
       marca: "Asus",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/ordinador/asustuf"
     };
     const producte4 = {
       titol: "Asus F515 Core-i5/16GB/512GB",
@@ -41,7 +44,8 @@ export class OrdenadoresComponent implements OnInit {
       preu: "499€",
       marca: "Asus",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/ordinador/asusf515"
     };
     const producte5 = {
       titol: "Apple MacBook Pro M1/16GB/512GB SSD",
@@ -49,7 +53,8 @@ export class OrdenadoresComponent implements OnInit {
       preu: "2009€",
       marca: "Apple",
       activat1: true,
-      activat2: true
+      activat2: true,
+      imatge: "http://localhost:4080/images/ordinador/macbook"
     };
 
     this.productes = [];

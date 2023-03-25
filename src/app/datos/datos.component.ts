@@ -10,8 +10,15 @@ export class DatosComponent {
   correo=localStorage.getItem('correo')
   username:any;
   contrasena:any;
+  productes: any[];
 
   constructor(private http: HttpClient) {
+    const images = {
+      imatge1: "http://localhost:4080/images/buscador/logo"
+    };
+    this.productes = [];
+    this.productes.push(images);
+
     console.log(this.correo)
     // @ts-ignore
     let req = new HttpParams().set('email',this.correo);

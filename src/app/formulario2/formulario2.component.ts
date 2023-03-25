@@ -12,26 +12,35 @@ export class Formulario2Component implements OnInit{
   usuari: string = '';
   email: string = '';
   password: string = '';
+  productes: any[];
+  recaptcha: boolean = false;
 
   constructor(private router: Router, private http:HttpClient) {
-    // this.correu= {
-    //   Usuari: this.usuari,
-    //   contrasenya: this.email,
-    //   email: this.email
-    // }
+    const images = {
+      imatge1: "http://localhost:4080/images/buscador/logo"
+    };
+    this.productes = [];
+    this.productes.push(images);
   }
 
   ngOnInit() {
 
   }
-
+  resolved(captchaResponse: string) {
+    this.recaptcha=true;
+    console.log(`Resolved captche with response ${captchaResponse}:`)
+  }
   formularioEnviado(): void{
-    this.http.post<any>("http://localhost:4080/registre", {user: this.usuari,
-      password: this.password,
-      email: this.email}).subscribe();
-    console.log(this.usuari,
-       this.password,
-       this.email)
+    if (this.recaptcha==true){
+      this.http.post<any>("http://localhost:4080/registre", {user: this.usuari,
+        password: this.password,
+        email: this.email}).subscribe();
+      console.log(this.usuari,
+        this.password,
+        this.email)
+    }else
+      alert("S'ha de fer el Recaptcha!")
+
 
   }
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="Es" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Aram Mateos & Dani Gelabert">
+  <meta name="description" content="">
+  <title>Formulario</title>
+  <link rel="shortcut icon" href="../../assets/minilogo.jpg">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+<header>
+  <div class="derecha">
+    <a routerLink="/pagina-web"><img [src]="productes[0].imatge1" class="logo" alt="minilogo"></a>
+  </div>
+</header>
+<div class="texto">
+  <article>
+      <div class="signin">
+        <form class="form">
+          <h2>CONSULTAS</h2>
+          <p type="Nombre usuario:"><input class="formulari" placeholder="Nombre usuario" [(ngModel)]="usuari" [ngModelOptions]="{standalone:true}"></p>
+          <p type="Correo:"><input class="formulari" placeholder="Correo" [(ngModel)]="correu" [ngModelOptions]="{standalone:true}"></p>
+          <p type="Mensaje:"><textarea id="missatge" placeholder="Escribe tu consulta" [(ngModel)]="missatge" [ngModelOptions]="{standalone:true}"></textarea></p>
+          <re-captcha (resolved)="resolved($event)"  [size]="'normal'" [theme]="'light'"></re-captcha>
+          <button (click)="formularioEnviado()">Enviar</button>
+        </form>
+      </div>
+  </article>
+</div>
+</body>
+</html>
