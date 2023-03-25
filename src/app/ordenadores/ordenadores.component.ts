@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-ordenadores',
@@ -9,7 +10,7 @@ export class OrdenadoresComponent implements OnInit {
 
   productes: any[];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     const producte1 = {
       titol: "MSI Modern 14 Core-i7/16GB/512GB SSD",
       envio: "Envio Gratis",
@@ -215,6 +216,7 @@ export class OrdenadoresComponent implements OnInit {
       suma=document.getElementById('precio11')!.innerHTML
     }
     console.log(localStorage.getItem("producto9"))
+    this.http.post("http://localhost:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
 
     function preu(){
       var res=localStorage.getItem('preu')!

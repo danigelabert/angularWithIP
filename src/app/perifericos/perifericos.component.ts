@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-perifericos',
@@ -7,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PerifericosComponent implements OnInit{
   productes: any[];
-  constructor() {
+  constructor(private http: HttpClient) {
     const producte1 = {
       titol: "NewSkill Icarus",
       envio: "Envio Gratis",
@@ -203,6 +204,8 @@ export class PerifericosComponent implements OnInit{
       localStorage.setItem("producto16", document.getElementById('producto16')!.innerHTML)
       suma=document.getElementById('precio16')!.innerHTML
     }
+    this.http.post("http://localhost:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
+
 
     function preu(){
       var res=localStorage.getItem('preu')!

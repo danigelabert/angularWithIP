@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ServeiService} from "../servei.service";
+import {HttpClient} from "@angular/common/http";
 
 function $(s: string) {
 
@@ -12,7 +13,7 @@ function $(s: string) {
 })
 export class MovilesComponent implements OnInit{
   productes: any[];
-    constructor(private s: ServeiService) {
+    constructor(private s: ServeiService, private http: HttpClient) {
       const producte1 = {
         titol: "iPhone 14 Pro Max",
         envio: "Envio Gratis",
@@ -62,6 +63,8 @@ export class MovilesComponent implements OnInit{
       this.productes.push(producte4);
       this.productes.push(producte5);
       this.productes.push(producte6);
+
+      this.http.post("http://localhost:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: "Entrar a la secció de mobils."}).subscribe()
    }
 
   ngOnInit(){
@@ -237,6 +240,7 @@ export class MovilesComponent implements OnInit{
       localStorage.setItem("producto6", document.getElementById('producto6')!.innerHTML)
       suma=document.getElementById('precio6')!.innerHTML
     }
+    this.http.post("http://localhost:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
     function preu(){
       var res=localStorage.getItem('preu')!
       var x=parseInt(res)
