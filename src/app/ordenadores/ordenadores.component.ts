@@ -19,7 +19,7 @@ export class OrdenadoresComponent implements OnInit {
       marca: "MSI",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/ordinador/msimodern"
+      imatge: "http://172.16.9.1:4080/images/ordinador/msimodern"
     };
     const producte2 = {
       titol: "HP Omen 16 Core-i7/16GB/1TB SSD",
@@ -28,7 +28,7 @@ export class OrdenadoresComponent implements OnInit {
       marca: "HP",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/ordinador/hpomen"
+      imatge: "http://172.16.9.1:4080/images/ordinador/hpomen"
     };
     const producte3 = {
       titol: "Asus TUF Gaming Core-i5/16GB/512GB",
@@ -37,7 +37,7 @@ export class OrdenadoresComponent implements OnInit {
       marca: "Asus",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/ordinador/asustuf"
+      imatge: "http://172.16.9.1:4080/images/ordinador/asustuf"
     };
     const producte4 = {
       titol: "Asus F515 Core-i5/16GB/512GB",
@@ -46,7 +46,7 @@ export class OrdenadoresComponent implements OnInit {
       marca: "Asus",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/ordinador/asusf515"
+      imatge: "http://172.16.9.1:4080/images/ordinador/asusf515"
     };
     const producte5 = {
       titol: "Apple MacBook Pro M1/16GB/512GB SSD",
@@ -55,7 +55,7 @@ export class OrdenadoresComponent implements OnInit {
       marca: "Apple",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/ordinador/macbook"
+      imatge: "http://172.16.9.1:4080/images/ordinador/macbook"
     };
 
     this.productes = [];
@@ -222,7 +222,7 @@ export class OrdenadoresComponent implements OnInit {
       suma=document.getElementById('precio11')!.innerHTML
     }
     console.log(localStorage.getItem("producto9"))
-    this.http.post("http://localhost:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
+    this.http.post("http://172.16.9.1:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
 
     function preu(){
       var res=localStorage.getItem('preu')!

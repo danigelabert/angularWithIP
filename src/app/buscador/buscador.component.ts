@@ -12,7 +12,7 @@ export class BuscadorComponent {
 
   constructor(private s: ServeiService) {
     const images = {
-      foto1: "http://localhost:4080/images/buscador/logo"
+      foto1: "http://172.16.9.1:4080/images/buscador/logo"
     };
     this.imatges = [];
     this.imatges.push(images);

@@ -17,7 +17,7 @@ export class Formulario2Component implements OnInit{
 
   constructor(private router: Router, private http:HttpClient) {
     const images = {
-      imatge1: "http://localhost:4080/images/buscador/logo"
+      imatge1: "http://172.16.9.1:4080/images/buscador/logo"
     };
     this.productes = [];
     this.productes.push(images);
@@ -32,7 +32,7 @@ export class Formulario2Component implements OnInit{
   }
   formularioEnviado(): void{
     if (this.recaptcha==true){
-      this.http.post<any>("http://localhost:4080/registre", {user: this.usuari,
+      this.http.post<any>("http://172.16.9.1:4080/registre", {user: this.usuari,
         password: this.password,
         email: this.email}).subscribe();
       console.log(this.usuari,

@@ -20,7 +20,7 @@ export class MovilesComponent implements OnInit{
         preu: "1499€",
         marca: "Apple",
         activat1: true,
-        imatge: "http://localhost:4080/images/mobil/iphone14"
+        imatge: "http://172.16.9.1:4080/images/mobil/iphone14"
       };
       const producte2 = {
         titol: "iPhone 13",
@@ -28,7 +28,7 @@ export class MovilesComponent implements OnInit{
         preu: "999€",
         marca: "Apple",
         activat1: true,
-        imatge: "http://localhost:4080/images/mobil/iphone13"
+        imatge: "http://172.16.9.1:4080/images/mobil/iphone13"
       };
       const producte3 = {
         titol: "Realme GT Master Edition",
@@ -36,7 +36,7 @@ export class MovilesComponent implements OnInit{
         preu: "330€",
         marca: "Realme",
         activat1: true,
-        imatge: "http://localhost:4080/images/mobil/realmegt"
+        imatge: "http://172.16.9.1:4080/images/mobil/realmegt"
       };
       const producte4 = {
         titol: "Oppo Find X3 Pro",
@@ -44,7 +44,7 @@ export class MovilesComponent implements OnInit{
         preu: "889€",
         marca: "Oppo",
         activat1: true,
-        imatge: "http://localhost:4080/images/mobil/oppofind"
+        imatge: "http://172.16.9.1:4080/images/mobil/oppofind"
       };
       const producte5 = {
         titol: "Xiaomi 12T Pro",
@@ -52,7 +52,7 @@ export class MovilesComponent implements OnInit{
         preu: "1450€",
         marca: "Xiaomi",
         activat1: true,
-        imatge: "http://localhost:4080/images/mobil/xiaomi12t"
+        imatge: "http://172.16.9.1:4080/images/mobil/xiaomi12t"
       };
       const producte6 = {
         titol: "Samsung S22 Ultra",
@@ -60,7 +60,7 @@ export class MovilesComponent implements OnInit{
         preu: "1459€",
         marca: "Samsung",
         activat1: true,
-        imatge: "http://localhost:4080/images/mobil/s22"
+        imatge: "http://172.16.9.1:4080/images/mobil/s22"
       };
       this.productes = [];
       this.productes.push(producte1);
@@ -70,7 +70,7 @@ export class MovilesComponent implements OnInit{
       this.productes.push(producte5);
       this.productes.push(producte6);
 
-      this.http.post("http://localhost:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: "Entrar a la secció de mobils."}).subscribe()
+      this.http.post("http://172.16.9.1:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: "Entrar a la secció de mobils."}).subscribe()
    }
 
   ngOnInit(){
@@ -246,7 +246,7 @@ export class MovilesComponent implements OnInit{
       localStorage.setItem("producto6", document.getElementById('producto6')!.innerHTML)
       suma=document.getElementById('precio6')!.innerHTML
     }
-    this.http.post("http://localhost:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
+    this.http.post("http://172.16.9.1:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
     function preu(){
       var res=localStorage.getItem('preu')!
       var x=parseInt(res)

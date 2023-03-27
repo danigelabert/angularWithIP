@@ -13,7 +13,7 @@ export class RestaurarComponent {
 
   constructor(private http: HttpClient) {
     const images = {
-      imatge1: "http://localhost:4080/images/buscador/logo"
+      imatge1: "http://172.16.9.1:4080/images/buscador/logo"
     };
     this.productes = [];
     this.productes.push(images);

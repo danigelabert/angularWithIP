@@ -12,10 +12,10 @@ export class PaginaWebComponent implements OnInit{
 
   constructor(private s: ServeiService) {
     const slider = {
-      foto1: "http://localhost:4080/images/slider/foto1",
-      foto2: "http://localhost:4080/images/slider/foto2",
-      foto3: "http://localhost:4080/images/slider/foto3",
-      foto4: "http://localhost:4080/images/slider/foto4"
+      foto1: "http://172.16.9.1:4080/images/slider/foto1",
+      foto2: "http://172.16.9.1:4080/images/slider/foto2",
+      foto3: "http://172.16.9.1:4080/images/slider/foto3",
+      foto4: "http://172.16.9.1:4080/images/slider/foto4"
     };
     this.imatges = [];
     this.imatges.push(slider);

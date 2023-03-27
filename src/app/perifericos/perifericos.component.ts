@@ -16,7 +16,7 @@ export class PerifericosComponent implements OnInit{
       tipus: "Monitor",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/periferics/newskill"
+      imatge: "http://172.16.9.1:4080/images/periferics/newskill"
     };
     const producte2 = {
       titol: "Logitech K120",
@@ -25,7 +25,7 @@ export class PerifericosComponent implements OnInit{
       tipus: "Teclat",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/periferics/logitech"
+      imatge: "http://172.16.9.1:4080/images/periferics/logitech"
     };
     const producte3 = {
       titol: "Forgeon Clutch",
@@ -34,7 +34,7 @@ export class PerifericosComponent implements OnInit{
       tipus: "Teclat",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/periferics/forgeon"
+      imatge: "http://172.16.9.1:4080/images/periferics/forgeon"
     };
     const producte4 = {
       titol: "Razer Basilisk",
@@ -43,7 +43,7 @@ export class PerifericosComponent implements OnInit{
       tipus: "Ratoli",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/periferics/razer"
+      imatge: "http://172.16.9.1:4080/images/periferics/razer"
     };
     const producte5 = {
       titol: "Asus P307",
@@ -52,7 +52,7 @@ export class PerifericosComponent implements OnInit{
       tipus: "Ratoli",
       activat1: true,
       activat2: true,
-      imatge: "http://localhost:4080/images/periferics/asus"
+      imatge: "http://172.16.9.1:4080/images/periferics/asus"
     };
 
     this.productes = [];
@@ -209,7 +209,7 @@ export class PerifericosComponent implements OnInit{
       localStorage.setItem("producto16", document.getElementById('producto16')!.innerHTML)
       suma=document.getElementById('precio16')!.innerHTML
     }
-    this.http.post("http://localhost:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
+    this.http.post("http://172.16.9.1:4080/api/logs", {usuario: localStorage.getItem("nombre"), accion: elementId+" afegit a la cistella."}).subscribe()
 
 
     function preu(){
