@@ -34,11 +34,9 @@ export class FormulariconsultesComponent implements OnInit{
       let req = new HttpParams().set('email',this.correu);
       let req2 = new HttpParams().set('name',this.usuari);
 
-
       this.http.get("http://localhost:4080/inicisessio", {params: req}).subscribe((client)=>{
         resultat=client;
         console.log(resultat);
-
         if(resultat==true){
           this.http.get("http://localhost:4080/user", {params: req2}).subscribe((client)=> {
             resultat = client;
